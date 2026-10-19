@@ -1,0 +1,113 @@
+out 19 19:04:54 host systemd[1]: Stopping Simple Desktop Display Manager...
+out 19 19:04:54 host sddm[2250]: Signal received: SIGTERM
+out 19 19:04:58 host sddm[2250]: Auth: sddm-helper exited with 255
+out 19 19:04:58 host sddm[2250]: Socket server stopping...
+out 19 19:04:58 host sddm[2250]: Socket server stopped.
+out 19 19:04:58 host sddm[2250]: Display server stopping...
+out 19 19:04:58 host sddm[2250]: Display server stopped.
+out 19 19:04:58 host sddm[2250]: Running display stop script  QList("/usr/share/sddm/scripts/Xstop")
+out 19 19:04:58 host systemd[1]: sddm.service: Deactivated successfully.
+out 19 19:04:58 host systemd[1]: Stopped Simple Desktop Display Manager.
+out 19 19:04:58 host systemd[1]: sddm.service: Consumed 3.620s CPU time over 13h 32min 33.927s wall clock time, 387.9M memory peak, 62M memory swap peak.
+out 19 19:04:58 host systemd[1]: Started Simple Desktop Display Manager.
+out 19 19:04:58 host sddm[834741]: Initializing...
+out 19 19:04:58 host sddm[834741]: Starting...
+out 19 19:04:58 host sddm[834741]: Logind interface found
+out 19 19:04:58 host sddm[834741]: Adding new display...
+out 19 19:04:58 host sddm[834741]: Loaded empty theme configuration
+out 19 19:04:58 host sddm[834741]: Using VT 1
+out 19 19:04:58 host sddm[834741]: Display server started.
+out 19 19:04:58 host sddm[834741]: Socket server starting...
+out 19 19:04:58 host sddm[834741]: Socket server started.
+out 19 19:04:58 host sddm[834741]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+out 19 19:04:58 host sddm[834741]: Greeter starting...
+out 19 19:04:58 host sddm-helper[834744]: [PAM] Starting...
+out 19 19:04:58 host sddm-helper[834744]: [PAM] Authenticating...
+out 19 19:04:58 host sddm-helper[834744]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+out 19 19:04:58 host sddm-helper[834744]: [PAM] returning.
+out 19 19:04:58 host sddm[834741]: Greeter session started successfully
+out 19 19:04:58 host sddm-helper[834744]: [PAM] Closing session
+out 19 19:04:58 host sddm-helper[834744]: pam_unix(sddm-greeter:session): session closed for user sddm
+out 19 19:04:58 host sddm-helper[834744]: [PAM] Ended.
+out 19 19:04:58 host sddm[834741]: Auth: sddm-helper exited with 4
+out 19 19:04:58 host sddm[834741]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+out 19 19:04:58 host sddm[834741]: Removing display SDDM::Display(0x563162525c60) ...
+out 19 19:04:58 host sddm[834741]: Socket server stopping...
+out 19 19:04:58 host sddm[834741]: Socket server stopped.
+out 19 19:04:58 host sddm[834741]: Failed to launch the display server, falling back to DisplayServer=x11-user
+out 19 19:04:58 host sddm[834741]: Adding new display...
+out 19 19:04:58 host sddm[834741]: Loaded empty theme configuration
+out 19 19:04:58 host sddm[834741]: Using VT 1
+out 19 19:04:58 host sddm[834741]: Display server started.
+out 19 19:04:58 host sddm[834741]: Socket server starting...
+out 19 19:04:58 host sddm[834741]: Socket server started.
+out 19 19:04:58 host sddm[834741]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+out 19 19:04:58 host sddm[834741]: Greeter starting...
+out 19 19:04:58 host sddm-helper[834971]: [PAM] Starting...
+out 19 19:04:58 host sddm-helper[834971]: [PAM] Authenticating...
+out 19 19:04:58 host sddm-helper[834971]: [PAM] returning.
+out 19 19:04:58 host sddm-helper[834971]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+out 19 19:04:58 host sddm-helper[834971]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--fgHydy --theme /usr/share/sddm/themes/Hyprlain"
+out 19 19:04:58 host sddm[834741]: Greeter session started successfully
+out 19 19:04:59 host sddm[834741]: Message received from greeter: Connect
+out 19 19:05:05 host sddm[834741]: Message received from greeter: Login
+out 19 19:05:05 host sddm[834741]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+out 19 19:05:05 host sddm[834741]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 2
+out 19 19:05:05 host sddm-helper[835678]: [PAM] Starting...
+out 19 19:05:05 host sddm-helper[835678]: [PAM] Authenticating...
+out 19 19:05:05 host sddm-helper[835678]: [PAM] Preparing to converse...
+out 19 19:05:05 host sddm-helper[835678]: [PAM] Conversation with 1 messages
+out 19 19:05:05 host sddm-helper[835678]: gkr-pam: unable to locate daemon control file
+out 19 19:05:05 host sddm-helper[835678]: gkr-pam: stashed password to try later in open session
+out 19 19:05:05 host sddm-helper[835678]: [PAM] returning.
+out 19 19:05:05 host sddm-helper[835678]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+out 19 19:05:05 host sddm[834741]: Authentication for user  "user"  successful
+out 19 19:05:05 host sddm-helper[835678]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+out 19 19:05:05 host sddm-helper[835678]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+out 19 19:05:05 host sddm-helper[835678]: gkr-pam: unlocked login keyring
+out 19 19:05:05 host sddm-helper[835678]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+out 19 19:05:05 host sddm-helper[835678]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+out 19 19:05:05 host sddm[834741]: Auth: sddm-helper exited successfully
+out 19 19:05:05 host sddm[834741]: Greeter stopped. SDDM::Auth::HELPER_SUCCESS
+out 19 19:05:36 host sddm[834741]: Session started false
+out 19 19:06:36 host sddm[834741]: Auth: sddm-helper exited with 2
+out 19 19:06:36 host sddm[834741]: Socket server stopping...
+out 19 19:06:36 host sddm[834741]: Socket server stopped.
+out 19 19:06:36 host sddm[834741]: Removing display SDDM::Display(0x5631624fd940) ...
+out 19 19:06:36 host sddm[834741]: Adding new display...
+out 19 19:06:36 host sddm[834741]: Loaded empty theme configuration
+out 19 19:06:36 host sddm[834741]: Using VT 1
+out 19 19:06:36 host sddm[834741]: Display server started.
+out 19 19:06:36 host sddm[834741]: Socket server starting...
+out 19 19:06:36 host sddm[834741]: Socket server started.
+out 19 19:06:36 host sddm[834741]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+out 19 19:06:36 host sddm[834741]: Greeter starting...
+out 19 19:06:36 host sddm-helper[839350]: [PAM] Starting...
+out 19 19:06:36 host sddm-helper[839350]: [PAM] Authenticating...
+out 19 19:06:36 host sddm-helper[839350]: [PAM] returning.
+out 19 19:06:36 host sddm-helper[839350]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+out 19 19:06:36 host sddm[834741]: Greeter session started successfully
+out 19 19:06:36 host sddm-helper[839350]: [PAM] Closing session
+out 19 19:06:36 host sddm-helper[839350]: pam_unix(sddm-greeter:session): session closed for user sddm
+out 19 19:06:36 host sddm-helper[839350]: [PAM] Ended.
+out 19 19:06:36 host sddm[834741]: Auth: sddm-helper exited with 4
+out 19 19:06:36 host sddm[834741]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+out 19 19:06:36 host sddm[834741]: Removing display SDDM::Display(0x7f281000d0f0) ...
+out 19 19:06:36 host sddm[834741]: Socket server stopping...
+out 19 19:06:36 host sddm[834741]: Socket server stopped.
+out 19 19:06:36 host sddm[834741]: Failed to launch the display server, falling back to DisplayServer=x11-user
+out 19 19:06:36 host sddm[834741]: Adding new display...
+out 19 19:06:36 host sddm[834741]: Loaded empty theme configuration
+out 19 19:06:36 host sddm[834741]: Using VT 1
+out 19 19:06:36 host sddm[834741]: Display server started.
+out 19 19:06:36 host sddm[834741]: Socket server starting...
+out 19 19:06:36 host sddm[834741]: Socket server started.
+out 19 19:06:36 host sddm[834741]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+out 19 19:06:36 host sddm[834741]: Greeter starting...
+out 19 19:06:36 host sddm-helper[839619]: [PAM] Starting...
+out 19 19:06:36 host sddm-helper[839619]: [PAM] Authenticating...
+out 19 19:06:36 host sddm-helper[839619]: [PAM] returning.
+out 19 19:06:36 host sddm-helper[839619]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+out 19 19:06:36 host sddm-helper[839619]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--odIFlN --theme /usr/share/sddm/themes/Hyprlain"
+out 19 19:06:36 host sddm[834741]: Greeter session started successfully
+out 19 19:06:38 host sddm[834741]: Message received from greeter: Connect

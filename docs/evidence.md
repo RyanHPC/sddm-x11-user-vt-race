@@ -23,6 +23,7 @@ Which script produced which log:
 | `vt-trace6-plasma.log` | `vt-trace4.bt` | cycle, Plasma Wayland |
 | `vt-trace7-weston.log` | `vt-trace7.bt` | Wayland greeter (weston) |
 | `vt-trace8-patched.log` | `vt-trace7.bt` | `x11-user` fallback + one-line patch |
+| `vt-trace9-pr2210.log` | `vt-trace4.bt` | `x11-user` fallback + the one-line change of sddm/sddm#2210 |
 
 ## 1. The cycle (original package, `x11-user` fallback, no delay)
 
@@ -93,6 +94,27 @@ Package: SDDM 0.21.0-7 built from the Arch `PKGBUILD` plus `git cherry-pick -n d
 
 Every switch is served by the still-running Xorg (SIGUSR1 → `VT_RELDISP` → `complete_change_console`), and the Xorg is terminated about 5 s later, which matches the daemon stopping the greeter 5 s after a successful session start ([`Display.cpp#L545-L549`](https://github.com/sddm/sddm/blob/v0.21.0/src/daemon/Display.cpp#L545-L549)). The order of events is reversed compared with section 1, and the cycle disappears.
 
+## 5. `x11-user` fallback + the change of sddm/sddm#2210
+
+Package: SDDM 0.21.0-7.2 = the Arch `PKGBUILD` plus a `sed` that replaces `VirtualTerminal::jumpToVt(vtNumber, x11UserSession);` with `VirtualTerminal::jumpToVt(vtNumber, true);` in `src/helper/UserSession.cpp`. That is the whole change of [PR #2210](https://github.com/sddm/sddm/pull/2210) (on `master` it sits behind an `if (vtNumber > 0)` that `v0.21.0` does not have). Same configuration as section 1 (`DisplayServer=wayland`, no `weston`, no `sleep` in PAM). One login, the first one after restarting SDDM, Hyprland. Logs: `vt-trace9-pr2210.log` and `sddm-journal-pr2210.log`. t = 0 is the SIGTERM that `sddm-helper-start-x11user` sends to the greeter's Xorg (pid 834982 in the trace).
+
+| Event | t |
+|---|---|
+| `GiveUp` (SIGTERM handler) and `xf86Wakeup` | +0 ms |
+| `CloseDownExtensions` (main loop already finished) | +1 ms |
+| `change_console` (kernel receives `VT_ACTIVATE`), SIGUSR1 sent to Xorg | +26 ms |
+| `xf86VTRequest` | +27 ms |
+| `ddxGiveUp` | +51 ms |
+| Xorg exit | +54 ms |
+| second `change_console` + `complete_change_console` | +30.1 s |
+| third `change_console` + `complete_change_console` (new greeter) | +90.4 s |
+
+There is no `xf86VTLeave` and no `complete_change_console` after the first `change_console`: the request is never served, as in section 1. Journal: `Login` at 19:05:05, `Session started false` at 19:05:36, `Auth: sddm-helper exited with 2` at 19:06:36, then a new greeter.
+
+Later in the same trace, the Xorg of the second greeter (pid 839674, still alive) serves a VT switch away from the greeter (there is no login in the journal) in about 2 ms: `xf86VTRequest`, `xf86VTLeave`, `complete_change_console`.
+
+Result: one login tested, one cycle; same sequence and timings as the unmodified package. By reading the code (not tested further), a likely reason is that `fixVtMode` only acts on the current VT when it is in `VT_AUTO`, while the greeter's Xorg leaves it in `VT_PROCESS`, and the kernel still waits for that Xorg to answer.
+
 ## Summary
 
 | Case | Logins | Cycles |
@@ -101,6 +123,7 @@ Every switch is served by the still-running Xorg (SIGUSR1 → `VT_RELDISP` → `
 | `DisplayServer=x11` | 9 | 0 |
 | Wayland greeter (weston) | 5 | 0 |
 | `x11-user` fallback + one-line patch | 11 | 0 |
+| `x11-user` fallback + change of sddm/sddm#2210 | 1 (first login) | 1 |
 | `x11-user` fallback + `sleep 1` in PAM | several, informal (not counted, no trace saved) | 0 observed |
 
 The comparison between the original package and the patched one was made on different boots and days, with the same configuration. What this does and does not show is in [limitations](limitations.md).

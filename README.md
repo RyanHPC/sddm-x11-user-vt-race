@@ -71,6 +71,7 @@ This is what worked on my setup (9 logins, 0 cycles), not a guaranteed universal
 | `DisplayServer=x11` | 0 cycles in 9 logins (from the log); Xorg serves the VT request in 71–110 ms |
 | Wayland greeter (`weston`) | 0 cycles in 5 logins; `systemd-logind` resets the VT mode after the compositor exits, switch completes immediately |
 | `x11-user` fallback + one-line patch (greeter stays alive) | 0 cycles in 11 logins; Xorg serves the VT request in 10–27 ms and receives SIGTERM ~5 s later |
+| `x11-user` fallback + change of [sddm/sddm#2210](https://github.com/sddm/sddm/pull/2210) | Cycle on the first login (1 login tested), same sequence and timings as the unmodified package |
 | `x11-user` fallback + `sleep 1` in PAM | No cycle in several informal logins; no trace or log saved |
 
 The patch row is the closest thing to a causal test: it changes only the order of events (the greeter outlives the VT switch) and the cycle disappears. The `x11` row shows the same switch being served by a live Xorg, and the `weston` row shows a different VT owner (`systemd-logind`) completing it.
