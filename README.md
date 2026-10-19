@@ -85,7 +85,7 @@ Raw data: [logs/](logs/). Scripts: [scripts/](scripts/).
 
 ## Related upstream issues
 
-Same symptom reported in [sddm/sddm#2129](https://github.com/sddm/sddm/issues/2129), [#2043](https://github.com/sddm/sddm/issues/2043) and [#1624](https://github.com/sddm/sddm/issues/1624). Related VT-switch discussions: [#1443](https://github.com/sddm/sddm/issues/1443), [PR #2204](https://github.com/sddm/sddm/pull/2204). I have not checked whether those reports have the same mechanism. If your journal (`journalctl -b -u sddm`) contains `falling back to DisplayServer=x11-user` right before the hang, it may be this one.
+Same symptom reported in [sddm/sddm#2129](https://github.com/sddm/sddm/issues/2129), [#2043](https://github.com/sddm/sddm/issues/2043) and [#1624](https://github.com/sddm/sddm/issues/1624). [#1929](https://github.com/sddm/sddm/issues/1929) may be the same (same versions, 32 s then 60 s, user helper only starting after the timeout), but it does not say which `DisplayServer` was used. Related VT-switch discussions: [#1443](https://github.com/sddm/sddm/issues/1443), [PR #2204](https://github.com/sddm/sddm/pull/2204). I have not checked whether those reports have the same mechanism. If your journal (`journalctl -b -u sddm`) contains `falling back to DisplayServer=x11-user` right before the hang, it may be this one.
 
 ## Not verified
 
