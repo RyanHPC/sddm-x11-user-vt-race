@@ -1,6 +1,6 @@
 # Workaround: `sleep 1` in the PAM session stack
 
-A timing workaround. It makes the problem go away in my tests but does not address the cause. Prefer the [`DisplayServer=x11` solution](solution-displayserver-x11.md).
+A timing workaround. It made the problem go away in my informal tests (several logins, no trace or log saved) but does not address the cause. Prefer the [`DisplayServer=x11` solution](solution-displayserver-x11.md).
 
 ## The line
 

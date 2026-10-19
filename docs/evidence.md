@@ -101,6 +101,6 @@ Every switch is served by the still-running Xorg (SIGUSR1 → `VT_RELDISP` → `
 | `DisplayServer=x11` | 9 | 0 |
 | Wayland greeter (weston) | 5 | 0 |
 | `x11-user` fallback + one-line patch | 11 | 0 |
-| `x11-user` fallback + `sleep 1` in PAM | several (not counted) | 0 |
+| `x11-user` fallback + `sleep 1` in PAM | several, informal (not counted, no trace saved) | 0 observed |
 
 The comparison between the original package and the patched one was made on different boots and days, with the same configuration. What this does and does not show is in [limitations](limitations.md).
