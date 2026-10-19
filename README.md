@@ -2,7 +2,7 @@
 
 A race in SDDM 0.21.0's `x11-user` greeter fallback: the greeter's X server is shut down at the same moment the user session asks for the VT switch, and the switch is never served.
 
-> **Investigation status:** root cause confirmed with traces on one machine, under the tested configuration. Not yet confirmed upstream or on other setups. See [Not verified](#not-verified).
+> **Investigation status:** root cause confirmed with traces on one machine, under the tested configuration. Not yet confirmed upstream or on other setups. See [Not verified](#not-verified). Reported upstream in [sddm/sddm#2225](https://github.com/sddm/sddm/issues/2225).
 
 ## Symptom
 
@@ -85,7 +85,7 @@ Raw data: [logs/](logs/). Scripts: [scripts/](scripts/).
 
 ## Related upstream issues
 
-Same symptom reported in [sddm/sddm#2129](https://github.com/sddm/sddm/issues/2129), [#2043](https://github.com/sddm/sddm/issues/2043) and [#1624](https://github.com/sddm/sddm/issues/1624). [#1929](https://github.com/sddm/sddm/issues/1929) may be the same (same versions, 32 s then 60 s, user helper only starting after the timeout), but it does not say which `DisplayServer` was used. Related VT-switch discussions: [#1443](https://github.com/sddm/sddm/issues/1443), [PR #2204](https://github.com/sddm/sddm/pull/2204). I have not checked whether those reports have the same mechanism. If your journal (`journalctl -b -u sddm`) contains `falling back to DisplayServer=x11-user` right before the hang, it may be this one.
+Same symptom reported in [sddm/sddm#2129](https://github.com/sddm/sddm/issues/2129), [#2043](https://github.com/sddm/sddm/issues/2043) and [#1624](https://github.com/sddm/sddm/issues/1624). #2129 seems to mix at least two variants of the same symptom: most of its thread is about the Wayland greeter (`kwin_wayland` leaving the VT in `VT_PROCESS`, see [PR #2204](https://github.com/sddm/sddm/pull/2204)), which is a different trigger from the `x11-user` fallback described here. [#1929](https://github.com/sddm/sddm/issues/1929) may be the same (same versions, 32 s then 60 s, user helper only starting after the timeout), but it does not say which `DisplayServer` was used. Related VT-switch discussions: [#1443](https://github.com/sddm/sddm/issues/1443), [PR #2204](https://github.com/sddm/sddm/pull/2204). I have not checked whether those reports have the same mechanism. If your journal (`journalctl -b -u sddm`) contains `falling back to DisplayServer=x11-user` right before the hang, it may be this one.
 
 ## Not verified
 
