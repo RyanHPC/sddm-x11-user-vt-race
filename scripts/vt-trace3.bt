@@ -1,0 +1,14 @@
+BEGIN { printf("ready\n"); }
+tracepoint:signal:signal_generate
+/(args->sig == 10 || args->sig == 15) && args->comm == "Xorg"/
+{ printf("%8llu ms SIGNAL-SENT sig=%d from %s[%d] to Xorg[%d]\n", nsecs/1000000, args->sig, comm, pid, args->pid); }
+tracepoint:signal:signal_deliver
+/comm == "Xorg"/
+{ if (args->sig == 15) { @term[pid] = 1; } printf("%8llu ms SIGNAL-DELIVERED sig=%d to Xorg[%d]\n", nsecs/1000000, args->sig, pid); }
+uprobe:/usr/lib/Xorg:xf86Wakeup /@term[pid]/ { printf("%8llu ms XORG xf86Wakeup (after SIGTERM) [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:xf86VTRequest { printf("%8llu ms XORG xf86VTRequest [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:xf86VTLeave   { printf("%8llu ms XORG xf86VTLeave [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:ddxGiveUp     { printf("%8llu ms XORG ddxGiveUp [%d]\n", nsecs/1000000, pid); }
+kprobe:change_console          { printf("%8llu ms KERNEL change_console\n", nsecs/1000000); }
+kprobe:complete_change_console { printf("%8llu ms KERNEL complete_change_console\n", nsecs/1000000); }
+kprobe:do_exit /pid == tid && comm == "Xorg"/ { printf("%8llu ms EXIT Xorg[%d]\n", nsecs/1000000, pid); }

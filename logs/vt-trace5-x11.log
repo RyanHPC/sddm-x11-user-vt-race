@@ -1,0 +1,177 @@
+Attached 15 probes
+ready
+60038512 ms SIGNAL-SENT sig=15 from sddm-helper-sta[405741] to Xorg[405742]
+60038512 ms SIGNAL-DELIVERED sig=15 to Xorg[405742]
+60038512 ms XORG GiveUp (SIGTERM handler) [405742]
+60038512 ms XORG xf86Wakeup (after SIGTERM) [405742]
+60038513 ms XORG CloseDownExtensions (main loop already finished) [405742]
+60040541 ms XORG CloseWellKnownConnections [405742]
+60040541 ms XORG ddxGiveUp [405742]
+60040544 ms EXIT Xorg[405742]
+60040600 ms KERNEL change_console
+60040600 ms KERNEL complete_change_console
+60040886 ms SIGNAL-DELIVERED sig=17 to Xorg[416840]
+60041064 ms SIGNAL-DELIVERED sig=17 to Xorg[416840]
+60046202 ms KERNEL change_console
+60046202 ms SIGNAL-SENT sig=10 from kworker/2:1[360339] to Xorg[416840]
+60046202 ms SIGNAL-DELIVERED sig=10 to Xorg[416840]
+60046202 ms XORG xf86VTRequest [416840]
+60046202 ms XORG xf86VTLeave [416840]
+60046281 ms KERNEL complete_change_console
+60056069 ms SIGNAL-SENT sig=15 from sddm[416838] to Xorg[416840]
+60056069 ms SIGNAL-DELIVERED sig=15 to Xorg[416840]
+60056069 ms XORG GiveUp (SIGTERM handler) [416840]
+60056069 ms XORG xf86Wakeup (after SIGTERM) [416840]
+60056070 ms XORG CloseDownExtensions (main loop already finished) [416840]
+60056115 ms XORG CloseWellKnownConnections [416840]
+60056115 ms XORG ddxGiveUp [416840]
+60056118 ms EXIT Xorg[416840]
+60056135 ms KERNEL change_console
+60056135 ms KERNEL complete_change_console
+60056433 ms SIGNAL-DELIVERED sig=17 to Xorg[418933]
+60056647 ms SIGNAL-DELIVERED sig=17 to Xorg[418933]
+60060557 ms KERNEL change_console
+60060557 ms SIGNAL-SENT sig=10 from kworker/10:1[270625] to Xorg[418933]
+60060557 ms SIGNAL-DELIVERED sig=10 to Xorg[418933]
+60060557 ms XORG xf86VTRequest [418933]
+60060557 ms XORG xf86VTLeave [418933]
+60060628 ms KERNEL complete_change_console
+60067956 ms SIGNAL-SENT sig=15 from sddm[416838] to Xorg[418933]
+60067956 ms SIGNAL-DELIVERED sig=15 to Xorg[418933]
+60067956 ms XORG GiveUp (SIGTERM handler) [418933]
+60067956 ms XORG xf86Wakeup (after SIGTERM) [418933]
+60067957 ms XORG CloseDownExtensions (main loop already finished) [418933]
+60068003 ms XORG CloseWellKnownConnections [418933]
+60068003 ms XORG ddxGiveUp [418933]
+60068005 ms EXIT Xorg[418933]
+60068018 ms KERNEL change_console
+60068018 ms KERNEL complete_change_console
+60068298 ms SIGNAL-DELIVERED sig=17 to Xorg[421211]
+60068490 ms SIGNAL-DELIVERED sig=17 to Xorg[421211]
+60072062 ms KERNEL change_console
+60072062 ms SIGNAL-SENT sig=10 from kworker/9:1[381073] to Xorg[421211]
+60072062 ms SIGNAL-DELIVERED sig=10 to Xorg[421211]
+60072062 ms XORG xf86VTRequest [421211]
+60072062 ms XORG xf86VTLeave [421211]
+60072172 ms KERNEL complete_change_console
+60079373 ms SIGNAL-SENT sig=15 from sddm[416838] to Xorg[421211]
+60079373 ms SIGNAL-DELIVERED sig=15 to Xorg[421211]
+60079373 ms XORG GiveUp (SIGTERM handler) [421211]
+60079373 ms XORG xf86Wakeup (after SIGTERM) [421211]
+60079373 ms XORG CloseDownExtensions (main loop already finished) [421211]
+60079423 ms XORG CloseWellKnownConnections [421211]
+60079423 ms XORG ddxGiveUp [421211]
+60079427 ms EXIT Xorg[421211]
+60079443 ms KERNEL change_console
+60079443 ms KERNEL complete_change_console
+60079752 ms SIGNAL-DELIVERED sig=17 to Xorg[422857]
+60079965 ms SIGNAL-DELIVERED sig=17 to Xorg[422857]
+60083979 ms KERNEL change_console
+60083979 ms SIGNAL-SENT sig=10 from kworker/9:2[419311] to Xorg[422857]
+60083982 ms SIGNAL-DELIVERED sig=10 to Xorg[422857]
+60083982 ms XORG xf86VTRequest [422857]
+60083989 ms XORG xf86VTLeave [422857]
+60084061 ms KERNEL complete_change_console
+60092382 ms SIGNAL-SENT sig=15 from sddm[416838] to Xorg[422857]
+60092382 ms SIGNAL-DELIVERED sig=15 to Xorg[422857]
+60092382 ms XORG GiveUp (SIGTERM handler) [422857]
+60092382 ms XORG xf86Wakeup (after SIGTERM) [422857]
+60092382 ms XORG CloseDownExtensions (main loop already finished) [422857]
+60092429 ms XORG CloseWellKnownConnections [422857]
+60092429 ms XORG ddxGiveUp [422857]
+60092432 ms EXIT Xorg[422857]
+60092443 ms KERNEL change_console
+60092443 ms KERNEL complete_change_console
+60092703 ms SIGNAL-DELIVERED sig=17 to Xorg[425200]
+60092893 ms SIGNAL-DELIVERED sig=17 to Xorg[425200]
+60096653 ms KERNEL change_console
+60096653 ms SIGNAL-SENT sig=10 from kworker/2:2[414284] to Xorg[425200]
+60096653 ms SIGNAL-DELIVERED sig=10 to Xorg[425200]
+60096653 ms XORG xf86VTRequest [425200]
+60096660 ms XORG xf86VTLeave [425200]
+60096743 ms KERNEL complete_change_console
+60110383 ms SIGNAL-SENT sig=15 from sddm[416838] to Xorg[425200]
+60110383 ms SIGNAL-DELIVERED sig=15 to Xorg[425200]
+60110383 ms XORG GiveUp (SIGTERM handler) [425200]
+60110383 ms XORG xf86Wakeup (after SIGTERM) [425200]
+60110383 ms XORG CloseDownExtensions (main loop already finished) [425200]
+60110429 ms XORG CloseWellKnownConnections [425200]
+60110429 ms XORG ddxGiveUp [425200]
+60110431 ms EXIT Xorg[425200]
+60110443 ms KERNEL change_console
+60110443 ms KERNEL complete_change_console
+60110690 ms SIGNAL-DELIVERED sig=17 to Xorg[427767]
+60110882 ms SIGNAL-DELIVERED sig=17 to Xorg[427767]
+60118436 ms KERNEL change_console
+60118436 ms SIGNAL-SENT sig=10 from kworker/2:2[414284] to Xorg[427767]
+60118439 ms SIGNAL-DELIVERED sig=10 to Xorg[427767]
+60118439 ms XORG xf86VTRequest [427767]
+60118447 ms XORG xf86VTLeave [427767]
+60118523 ms KERNEL complete_change_console
+60133072 ms SIGNAL-SENT sig=15 from sddm[416838] to Xorg[427767]
+60133072 ms SIGNAL-DELIVERED sig=15 to Xorg[427767]
+60133072 ms XORG GiveUp (SIGTERM handler) [427767]
+60133072 ms XORG xf86Wakeup (after SIGTERM) [427767]
+60133072 ms XORG CloseDownExtensions (main loop already finished) [427767]
+60133121 ms XORG CloseWellKnownConnections [427767]
+60133121 ms XORG ddxGiveUp [427767]
+60133124 ms EXIT Xorg[427767]
+60133144 ms KERNEL change_console
+60133144 ms KERNEL complete_change_console
+60133400 ms SIGNAL-DELIVERED sig=17 to Xorg[430787]
+60133596 ms SIGNAL-DELIVERED sig=17 to Xorg[430787]
+60137236 ms KERNEL change_console
+60137236 ms SIGNAL-SENT sig=10 from kworker/8:0[403175] to Xorg[430787]
+60137236 ms SIGNAL-DELIVERED sig=10 to Xorg[430787]
+60137236 ms XORG xf86VTRequest [430787]
+60137236 ms XORG xf86VTLeave [430787]
+60137333 ms KERNEL complete_change_console
+60209526 ms SIGNAL-SENT sig=15 from sddm[416838] to Xorg[430787]
+60209526 ms SIGNAL-DELIVERED sig=15 to Xorg[430787]
+60209526 ms XORG GiveUp (SIGTERM handler) [430787]
+60209526 ms XORG xf86Wakeup (after SIGTERM) [430787]
+60209526 ms XORG CloseDownExtensions (main loop already finished) [430787]
+60209549 ms XORG CloseWellKnownConnections [430787]
+60209549 ms XORG ddxGiveUp [430787]
+60209562 ms EXIT Xorg[430787]
+60209583 ms KERNEL change_console
+60209583 ms KERNEL complete_change_console
+60209846 ms SIGNAL-DELIVERED sig=17 to Xorg[434801]
+60210064 ms SIGNAL-DELIVERED sig=17 to Xorg[434801]
+60214388 ms KERNEL change_console
+60214388 ms SIGNAL-SENT sig=10 from kworker/5:1[384395] to Xorg[434801]
+60214388 ms SIGNAL-DELIVERED sig=10 to Xorg[434801]
+60214388 ms XORG xf86VTRequest [434801]
+60214396 ms XORG xf86VTLeave [434801]
+60214470 ms KERNEL complete_change_console
+60275240 ms SIGNAL-SENT sig=15 from sddm[416838] to Xorg[434801]
+60275240 ms SIGNAL-DELIVERED sig=15 to Xorg[434801]
+60275240 ms XORG GiveUp (SIGTERM handler) [434801]
+60275240 ms XORG xf86Wakeup (after SIGTERM) [434801]
+60275240 ms XORG CloseDownExtensions (main loop already finished) [434801]
+60275317 ms XORG CloseWellKnownConnections [434801]
+60275317 ms XORG ddxGiveUp [434801]
+60275327 ms EXIT Xorg[434801]
+60275362 ms KERNEL change_console
+60275362 ms KERNEL complete_change_console
+60275661 ms SIGNAL-DELIVERED sig=17 to Xorg[438623]
+60275861 ms SIGNAL-DELIVERED sig=17 to Xorg[438623]
+60288806 ms KERNEL change_console
+60288806 ms SIGNAL-SENT sig=10 from kworker/10:1[270625] to Xorg[438623]
+60288809 ms SIGNAL-DELIVERED sig=10 to Xorg[438623]
+60288809 ms XORG xf86VTRequest [438623]
+60288816 ms XORG xf86VTLeave [438623]
+60288908 ms KERNEL complete_change_console
+60303415 ms KERNEL change_console
+60303416 ms KERNEL complete_change_console
+
+
+@term[430787]: 1
+@term[418933]: 1
+@term[416840]: 1
+@term[405742]: 1
+@term[421211]: 1
+@term[422857]: 1
+@term[425200]: 1
+@term[434801]: 1
+@term[427767]: 1

@@ -1,0 +1,970 @@
+Oct 18 03:25:55 host systemd[1]: Started Simple Desktop Display Manager.
+Oct 18 03:25:56 host sddm[2132]: Initializing...
+Oct 18 03:25:56 host sddm[2132]: Starting...
+Oct 18 03:25:56 host sddm[2132]: Logind interface found
+Oct 18 03:25:56 host sddm[2132]: Adding new display...
+Oct 18 03:25:56 host sddm[2132]: Loaded empty theme configuration
+Oct 18 03:25:56 host sddm[2132]: Using VT 1
+Oct 18 03:25:56 host sddm[2132]: Display server started.
+Oct 18 03:25:56 host sddm[2132]: Socket server starting...
+Oct 18 03:25:56 host sddm[2132]: Socket server started.
+Oct 18 03:25:56 host sddm[2132]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 03:25:56 host sddm[2132]: Greeter starting...
+Oct 18 03:25:56 host sddm-helper[2171]: [PAM] Starting...
+Oct 18 03:25:56 host sddm-helper[2171]: [PAM] Authenticating...
+Oct 18 03:25:56 host sddm-helper[2171]: [PAM] returning.
+Oct 18 03:25:56 host sddm-helper[2171]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 03:25:56 host sddm[2132]: Greeter session started successfully
+Oct 18 03:25:56 host sddm-helper[2171]: [PAM] Closing session
+Oct 18 03:25:56 host sddm-helper[2171]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 03:25:56 host sddm-helper[2171]: [PAM] Ended.
+Oct 18 03:25:56 host sddm[2132]: Auth: sddm-helper exited with 4
+Oct 18 03:25:56 host sddm[2132]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 03:25:56 host sddm[2132]: Removing display SDDM::Display(0x55fb4ad23f90) ...
+Oct 18 03:25:56 host sddm[2132]: Socket server stopping...
+Oct 18 03:25:56 host sddm[2132]: Socket server stopped.
+Oct 18 03:25:56 host sddm[2132]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 03:25:56 host sddm[2132]: Adding new display...
+Oct 18 03:25:56 host sddm[2132]: Loaded empty theme configuration
+Oct 18 03:25:56 host sddm[2132]: Using VT 1
+Oct 18 03:25:56 host sddm[2132]: Display server started.
+Oct 18 03:25:56 host sddm[2132]: Socket server starting...
+Oct 18 03:25:56 host sddm[2132]: Socket server started.
+Oct 18 03:25:56 host sddm[2132]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 03:25:56 host sddm[2132]: Greeter starting...
+Oct 18 03:25:56 host sddm-helper[2224]: [PAM] Starting...
+Oct 18 03:25:56 host sddm-helper[2224]: [PAM] Authenticating...
+Oct 18 03:25:56 host sddm-helper[2224]: [PAM] returning.
+Oct 18 03:25:56 host sddm-helper[2224]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 03:25:56 host sddm-helper[2224]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--yIytmg --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 03:25:56 host sddm[2132]: Greeter session started successfully
+Oct 18 03:25:56 host sddm[2132]: Message received from greeter: Connect
+Oct 18 03:37:58 host systemd[1]: Stopping Simple Desktop Display Manager...
+Oct 18 03:37:58 host sddm[2132]: Signal received: SIGTERM
+Oct 18 03:37:58 host sddm[2132]: Greeter stopping...
+Oct 18 03:38:00 host sddm[2132]: Auth: sddm-helper exited with 255
+Oct 18 03:38:00 host sddm[2132]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 03:38:00 host sddm[2132]: Socket server stopping...
+Oct 18 03:38:00 host sddm[2132]: Socket server stopped.
+Oct 18 03:38:00 host systemd[1]: sddm.service: Deactivated successfully.
+Oct 18 03:38:00 host systemd[1]: Stopped Simple Desktop Display Manager.
+Oct 18 03:38:00 host systemd[1]: Started Simple Desktop Display Manager.
+Oct 18 03:38:00 host sddm[24635]: Initializing...
+Oct 18 03:38:00 host sddm[24635]: Starting...
+Oct 18 03:38:00 host sddm[24635]: Logind interface found
+Oct 18 03:38:00 host sddm[24635]: Adding new display...
+Oct 18 03:38:00 host sddm[24635]: Loaded empty theme configuration
+Oct 18 03:38:00 host sddm[24635]: Using VT 1
+Oct 18 03:38:00 host sddm[24635]: Display server started.
+Oct 18 03:38:00 host sddm[24635]: Socket server starting...
+Oct 18 03:38:00 host sddm[24635]: Socket server started.
+Oct 18 03:38:00 host sddm[24635]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 03:38:00 host sddm[24635]: Greeter starting...
+Oct 18 03:38:00 host sddm-helper[24637]: [PAM] Starting...
+Oct 18 03:38:00 host sddm-helper[24637]: [PAM] Authenticating...
+Oct 18 03:38:00 host sddm-helper[24637]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 03:38:00 host sddm-helper[24637]: [PAM] returning.
+Oct 18 03:38:00 host sddm[24635]: Greeter session started successfully
+Oct 18 03:38:00 host sddm[24635]: Message received from greeter: Connect
+Oct 18 03:38:17 host sddm[24635]: Message received from greeter: Login
+Oct 18 03:38:17 host sddm[24635]: Reading from "/usr/share/wayland-sessions/plasma.desktop"
+Oct 18 03:38:17 host sddm[24635]: Session "/usr/share/wayland-sessions/plasma.desktop" selected, command: "/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland" for VT 3
+Oct 18 03:38:17 host sddm-helper[25430]: [PAM] Starting...
+Oct 18 03:38:17 host sddm-helper[25430]: [PAM] Authenticating...
+Oct 18 03:38:17 host sddm-helper[25430]: [PAM] Preparing to converse...
+Oct 18 03:38:17 host sddm-helper[25430]: [PAM] Conversation with 1 messages
+Oct 18 03:38:17 host sddm-helper[25430]: pam_unix(sddm:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=user
+Oct 18 03:38:18 host sddm[24635]: Message received from greeter: Login
+Oct 18 03:38:18 host sddm[24635]: Reading from "/usr/share/wayland-sessions/plasma.desktop"
+Oct 18 03:38:18 host sddm[24635]: Existing authentication ongoing, aborting
+Oct 18 03:38:19 host sddm-helper[25430]: [PAM] authenticate: Authentication failure
+Oct 18 03:38:19 host sddm-helper[25430]: [PAM] returning.
+Oct 18 03:38:19 host sddm[24635]: Authentication error: SDDM::Auth::ERROR_AUTHENTICATION "Authentication failure"
+Oct 18 03:38:19 host sddm[24635]: Authentication for user  ""  failed
+Oct 18 03:38:19 host sddm-helper[25430]: [PAM] Asked to close the session but it wasn't previously open
+Oct 18 03:38:19 host sddm-helper[25430]: [PAM] Ended.
+Oct 18 03:38:19 host sddm[24635]: Auth: sddm-helper exited with 1
+Oct 18 03:38:30 host sddm[24635]: Message received from greeter: Login
+Oct 18 03:38:30 host sddm[24635]: Reading from "/usr/share/wayland-sessions/plasma.desktop"
+Oct 18 03:38:30 host sddm[24635]: Session "/usr/share/wayland-sessions/plasma.desktop" selected, command: "/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland" for VT 3
+Oct 18 03:38:30 host sddm-helper[25554]: [PAM] Starting...
+Oct 18 03:38:30 host sddm-helper[25554]: [PAM] Authenticating...
+Oct 18 03:38:30 host sddm-helper[25554]: [PAM] Preparing to converse...
+Oct 18 03:38:30 host sddm-helper[25554]: [PAM] Conversation with 1 messages
+Oct 18 03:38:30 host sddm-helper[25554]: gkr-pam: unable to locate daemon control file
+Oct 18 03:38:30 host sddm-helper[25554]: gkr-pam: stashed password to try later in open session
+Oct 18 03:38:30 host sddm-helper[25554]: [PAM] returning.
+Oct 18 03:38:30 host sddm-helper[25554]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 03:38:30 host sddm[24635]: Authentication for user  "user"  successful
+Oct 18 03:38:30 host sddm-helper[25554]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 03:38:30 host sddm-helper[25554]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 03:38:30 host sddm-helper[25554]: gkr-pam: unlocked login keyring
+Oct 18 03:38:30 host sddm-helper[25554]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 03:38:30 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:38:30 host sddm[24635]: Greeter stopped. SDDM::Auth::HELPER_SUCCESS
+Oct 18 03:38:30 host sddm-helper[25554]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland"
+Oct 18 03:38:30 host sddm[24635]: Session started true
+Oct 18 03:38:52 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:38:52 host sddm[24635]: Socket server stopping...
+Oct 18 03:38:52 host sddm[24635]: Socket server stopped.
+Oct 18 03:38:52 host sddm[24635]: Removing display SDDM::Display(0x559fb89a3240) ...
+Oct 18 03:38:52 host sddm[24635]: Adding new display...
+Oct 18 03:38:52 host sddm[24635]: Loaded empty theme configuration
+Oct 18 03:38:52 host sddm[24635]: Using VT 1
+Oct 18 03:38:52 host sddm[24635]: Display server started.
+Oct 18 03:38:52 host sddm[24635]: Socket server starting...
+Oct 18 03:38:52 host sddm[24635]: Socket server started.
+Oct 18 03:38:52 host sddm[24635]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 03:38:52 host sddm[24635]: Greeter starting...
+Oct 18 03:38:52 host sddm-helper[27692]: [PAM] Starting...
+Oct 18 03:38:52 host sddm-helper[27692]: [PAM] Authenticating...
+Oct 18 03:38:52 host sddm-helper[27692]: [PAM] returning.
+Oct 18 03:38:52 host sddm-helper[27692]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 03:38:52 host sddm[24635]: Greeter session started successfully
+Oct 18 03:38:52 host sddm[24635]: Message received from greeter: Connect
+Oct 18 03:39:05 host sddm[24635]: Message received from greeter: Login
+Oct 18 03:39:05 host sddm[24635]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 03:39:05 host sddm[24635]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 4
+Oct 18 03:39:05 host sddm-helper[28491]: [PAM] Starting...
+Oct 18 03:39:05 host sddm-helper[28491]: [PAM] Authenticating...
+Oct 18 03:39:05 host sddm-helper[28491]: [PAM] Preparing to converse...
+Oct 18 03:39:05 host sddm-helper[28491]: [PAM] Conversation with 1 messages
+Oct 18 03:39:05 host sddm-helper[28491]: gkr-pam: unable to locate daemon control file
+Oct 18 03:39:05 host sddm-helper[28491]: gkr-pam: stashed password to try later in open session
+Oct 18 03:39:05 host sddm-helper[28491]: [PAM] returning.
+Oct 18 03:39:05 host sddm-helper[28491]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 03:39:05 host sddm[24635]: Authentication for user  "user"  successful
+Oct 18 03:39:05 host sddm-helper[28491]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 03:39:05 host sddm-helper[28491]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 03:39:05 host sddm-helper[28491]: gkr-pam: unlocked login keyring
+Oct 18 03:39:05 host sddm-helper[28491]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 03:39:05 host sddm-helper[28491]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 03:39:05 host sddm[24635]: Session started true
+Oct 18 03:39:05 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:39:05 host sddm[24635]: Greeter stopped. SDDM::Auth::HELPER_SUCCESS
+Oct 18 03:39:15 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:39:15 host sddm[24635]: Socket server stopping...
+Oct 18 03:39:15 host sddm[24635]: Socket server stopped.
+Oct 18 03:39:15 host sddm[24635]: Removing display SDDM::Display(0x7feea4009c40) ...
+Oct 18 03:39:15 host sddm[24635]: Adding new display...
+Oct 18 03:39:15 host sddm[24635]: Loaded empty theme configuration
+Oct 18 03:39:15 host sddm[24635]: Using VT 1
+Oct 18 03:39:15 host sddm[24635]: Display server started.
+Oct 18 03:39:15 host sddm[24635]: Socket server starting...
+Oct 18 03:39:15 host sddm[24635]: Socket server started.
+Oct 18 03:39:15 host sddm[24635]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 03:39:15 host sddm[24635]: Greeter starting...
+Oct 18 03:39:15 host sddm-helper[29550]: [PAM] Starting...
+Oct 18 03:39:15 host sddm-helper[29550]: [PAM] Authenticating...
+Oct 18 03:39:15 host sddm-helper[29550]: [PAM] returning.
+Oct 18 03:39:15 host sddm-helper[29550]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 03:39:15 host sddm[24635]: Greeter session started successfully
+Oct 18 03:39:15 host sddm[24635]: Message received from greeter: Connect
+Oct 18 03:39:19 host sddm[24635]: Message received from greeter: Login
+Oct 18 03:39:19 host sddm[24635]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 03:39:19 host sddm[24635]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 5
+Oct 18 03:39:19 host sddm-helper[30219]: [PAM] Starting...
+Oct 18 03:39:19 host sddm-helper[30219]: [PAM] Authenticating...
+Oct 18 03:39:19 host sddm-helper[30219]: [PAM] Preparing to converse...
+Oct 18 03:39:19 host sddm-helper[30219]: [PAM] Conversation with 1 messages
+Oct 18 03:39:19 host sddm-helper[30219]: gkr-pam: unable to locate daemon control file
+Oct 18 03:39:19 host sddm-helper[30219]: gkr-pam: stashed password to try later in open session
+Oct 18 03:39:19 host sddm-helper[30219]: [PAM] returning.
+Oct 18 03:39:19 host sddm-helper[30219]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 03:39:19 host sddm[24635]: Authentication for user  "user"  successful
+Oct 18 03:39:19 host sddm-helper[30219]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 03:39:19 host sddm-helper[30219]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 03:39:19 host sddm-helper[30219]: gkr-pam: unlocked login keyring
+Oct 18 03:39:19 host sddm-helper[30219]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 03:39:19 host sddm-helper[30219]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 03:39:19 host sddm[24635]: Session started true
+Oct 18 03:39:19 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:39:19 host sddm[24635]: Greeter stopped. SDDM::Auth::HELPER_SUCCESS
+Oct 18 03:39:27 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:39:27 host sddm[24635]: Socket server stopping...
+Oct 18 03:39:27 host sddm[24635]: Socket server stopped.
+Oct 18 03:39:27 host sddm[24635]: Removing display SDDM::Display(0x7feea400d480) ...
+Oct 18 03:39:27 host sddm[24635]: Adding new display...
+Oct 18 03:39:27 host sddm[24635]: Loaded empty theme configuration
+Oct 18 03:39:27 host sddm[24635]: Using VT 1
+Oct 18 03:39:27 host sddm[24635]: Display server started.
+Oct 18 03:39:27 host sddm[24635]: Socket server starting...
+Oct 18 03:39:27 host sddm[24635]: Socket server started.
+Oct 18 03:39:27 host sddm[24635]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 03:39:27 host sddm[24635]: Greeter starting...
+Oct 18 03:39:27 host sddm-helper[31253]: [PAM] Starting...
+Oct 18 03:39:27 host sddm-helper[31253]: [PAM] Authenticating...
+Oct 18 03:39:27 host sddm-helper[31253]: [PAM] returning.
+Oct 18 03:39:27 host sddm-helper[31253]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 03:39:27 host sddm[24635]: Greeter session started successfully
+Oct 18 03:39:27 host sddm[24635]: Message received from greeter: Connect
+Oct 18 03:39:33 host sddm[24635]: Message received from greeter: Login
+Oct 18 03:39:33 host sddm[24635]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 03:39:33 host sddm[24635]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 03:39:33 host sddm-helper[31956]: [PAM] Starting...
+Oct 18 03:39:33 host sddm-helper[31956]: [PAM] Authenticating...
+Oct 18 03:39:33 host sddm-helper[31956]: [PAM] Preparing to converse...
+Oct 18 03:39:33 host sddm-helper[31956]: [PAM] Conversation with 1 messages
+Oct 18 03:39:33 host sddm-helper[31956]: gkr-pam: unable to locate daemon control file
+Oct 18 03:39:33 host sddm-helper[31956]: gkr-pam: stashed password to try later in open session
+Oct 18 03:39:33 host sddm-helper[31956]: [PAM] returning.
+Oct 18 03:39:33 host sddm-helper[31956]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 03:39:33 host sddm[24635]: Authentication for user  "user"  successful
+Oct 18 03:39:33 host sddm-helper[31956]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 03:39:33 host sddm-helper[31956]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 03:39:33 host sddm-helper[31956]: gkr-pam: unlocked login keyring
+Oct 18 03:39:33 host sddm-helper[31956]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 03:39:33 host sddm-helper[31956]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 03:39:34 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:39:34 host sddm[24635]: Greeter stopped. SDDM::Auth::HELPER_SUCCESS
+Oct 18 03:39:34 host sddm[24635]: Session started true
+Oct 18 03:39:41 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:39:41 host sddm[24635]: Socket server stopping...
+Oct 18 03:39:41 host sddm[24635]: Socket server stopped.
+Oct 18 03:39:41 host sddm[24635]: Removing display SDDM::Display(0x7feea400e6c0) ...
+Oct 18 03:39:41 host sddm[24635]: Adding new display...
+Oct 18 03:39:41 host sddm[24635]: Loaded empty theme configuration
+Oct 18 03:39:41 host sddm[24635]: Using VT 1
+Oct 18 03:39:41 host sddm[24635]: Display server started.
+Oct 18 03:39:41 host sddm[24635]: Socket server starting...
+Oct 18 03:39:41 host sddm[24635]: Socket server started.
+Oct 18 03:39:41 host sddm[24635]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 03:39:41 host sddm[24635]: Greeter starting...
+Oct 18 03:39:41 host sddm-helper[32985]: [PAM] Starting...
+Oct 18 03:39:41 host sddm-helper[32985]: [PAM] Authenticating...
+Oct 18 03:39:41 host sddm-helper[32985]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 03:39:41 host sddm-helper[32985]: [PAM] returning.
+Oct 18 03:39:41 host sddm[24635]: Greeter session started successfully
+Oct 18 03:39:41 host sddm[24635]: Message received from greeter: Connect
+Oct 18 03:39:48 host sddm[24635]: Message received from greeter: Login
+Oct 18 03:39:48 host sddm[24635]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 03:39:48 host sddm[24635]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 03:39:48 host sddm-helper[33672]: [PAM] Starting...
+Oct 18 03:39:48 host sddm-helper[33672]: [PAM] Authenticating...
+Oct 18 03:39:48 host sddm-helper[33672]: [PAM] Preparing to converse...
+Oct 18 03:39:48 host sddm-helper[33672]: [PAM] Conversation with 1 messages
+Oct 18 03:39:48 host sddm-helper[33672]: gkr-pam: unable to locate daemon control file
+Oct 18 03:39:48 host sddm-helper[33672]: gkr-pam: stashed password to try later in open session
+Oct 18 03:39:48 host sddm-helper[33672]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 03:39:48 host sddm-helper[33672]: [PAM] returning.
+Oct 18 03:39:48 host sddm[24635]: Authentication for user  "user"  successful
+Oct 18 03:39:48 host sddm-helper[33672]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 03:39:48 host sddm-helper[33672]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 03:39:48 host sddm-helper[33672]: gkr-pam: unlocked login keyring
+Oct 18 03:39:48 host sddm-helper[33672]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 03:39:48 host sddm-helper[33672]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 03:39:48 host sddm[24635]: Session started true
+Oct 18 03:39:48 host sddm[24635]: Auth: sddm-helper exited successfully
+Oct 18 03:39:48 host sddm[24635]: Greeter stopped. SDDM::Auth::HELPER_SUCCESS
+Oct 18 04:10:53 host systemd[1]: Stopping Simple Desktop Display Manager...
+Oct 18 04:10:53 host sddm[24635]: Signal received: SIGTERM
+Oct 18 04:10:55 host sddm[24635]: Auth: sddm-helper exited with 255
+Oct 18 04:10:55 host sddm[24635]: Socket server stopping...
+Oct 18 04:10:55 host sddm[24635]: Socket server stopped.
+Oct 18 04:10:55 host systemd[1]: sddm.service: Deactivated successfully.
+Oct 18 04:10:55 host systemd[1]: Stopped Simple Desktop Display Manager.
+Oct 18 04:10:55 host systemd[1]: Started Simple Desktop Display Manager.
+Oct 18 04:10:55 host sddm[82132]: Initializing...
+Oct 18 04:10:55 host sddm[82132]: Starting...
+Oct 18 04:10:55 host sddm[82132]: Logind interface found
+Oct 18 04:10:55 host sddm[82132]: Adding new display...
+Oct 18 04:10:55 host sddm[82132]: Loaded empty theme configuration
+Oct 18 04:10:55 host sddm[82132]: Using VT 1
+Oct 18 04:10:55 host sddm[82132]: Display server started.
+Oct 18 04:10:55 host sddm[82132]: Socket server starting...
+Oct 18 04:10:55 host sddm[82132]: Socket server started.
+Oct 18 04:10:55 host sddm[82132]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:10:55 host sddm[82132]: Greeter starting...
+Oct 18 04:10:55 host sddm-helper[82134]: [PAM] Starting...
+Oct 18 04:10:55 host sddm-helper[82134]: [PAM] Authenticating...
+Oct 18 04:10:55 host sddm-helper[82134]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:10:55 host sddm-helper[82134]: [PAM] returning.
+Oct 18 04:10:55 host sddm[82132]: Greeter session started successfully
+Oct 18 04:10:55 host sddm-helper[82134]: [PAM] Closing session
+Oct 18 04:10:55 host sddm-helper[82134]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:10:55 host sddm-helper[82134]: [PAM] Ended.
+Oct 18 04:10:55 host sddm[82132]: Auth: sddm-helper exited with 4
+Oct 18 04:10:55 host sddm[82132]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:10:55 host sddm[82132]: Removing display SDDM::Display(0x559ea5e079d0) ...
+Oct 18 04:10:55 host sddm[82132]: Socket server stopping...
+Oct 18 04:10:55 host sddm[82132]: Socket server stopped.
+Oct 18 04:10:55 host sddm[82132]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:10:55 host sddm[82132]: Adding new display...
+Oct 18 04:10:55 host sddm[82132]: Loaded empty theme configuration
+Oct 18 04:10:55 host sddm[82132]: Using VT 1
+Oct 18 04:10:55 host sddm[82132]: Display server started.
+Oct 18 04:10:55 host sddm[82132]: Socket server starting...
+Oct 18 04:10:55 host sddm[82132]: Socket server started.
+Oct 18 04:10:55 host sddm[82132]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:10:55 host sddm[82132]: Greeter starting...
+Oct 18 04:10:55 host sddm-helper[82195]: [PAM] Starting...
+Oct 18 04:10:55 host sddm-helper[82195]: [PAM] Authenticating...
+Oct 18 04:10:55 host sddm-helper[82195]: [PAM] returning.
+Oct 18 04:10:55 host sddm-helper[82195]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:10:55 host sddm-helper[82195]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--ZFQDHk --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:10:55 host sddm[82132]: Greeter session started successfully
+Oct 18 04:10:56 host sddm[82132]: Message received from greeter: Connect
+Oct 18 04:11:02 host sddm[82132]: Message received from greeter: Login
+Oct 18 04:11:02 host sddm[82132]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:11:02 host sddm[82132]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:11:02 host sddm-helper[82898]: [PAM] Starting...
+Oct 18 04:11:02 host sddm-helper[82898]: [PAM] Authenticating...
+Oct 18 04:11:02 host sddm-helper[82898]: [PAM] Preparing to converse...
+Oct 18 04:11:02 host sddm-helper[82898]: [PAM] Conversation with 1 messages
+Oct 18 04:11:02 host sddm-helper[82898]: gkr-pam: unable to locate daemon control file
+Oct 18 04:11:02 host sddm-helper[82898]: gkr-pam: stashed password to try later in open session
+Oct 18 04:11:02 host sddm-helper[82898]: [PAM] returning.
+Oct 18 04:11:02 host sddm-helper[82898]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:11:02 host sddm[82132]: Authentication for user  "user"  successful
+Oct 18 04:11:02 host sddm-helper[82898]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:11:02 host sddm-helper[82898]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:11:02 host sddm-helper[82898]: gkr-pam: unlocked login keyring
+Oct 18 04:11:02 host sddm-helper[82898]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:11:02 host sddm-helper[82898]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:11:02 host sddm[82132]: Session started true
+Oct 18 04:11:07 host sddm[82132]: Greeter stopping...
+Oct 18 04:11:07 host sddm[82132]: Auth: sddm-helper exited with 255
+Oct 18 04:11:07 host sddm[82132]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:11:28 host sddm[82132]: Signal received: SIGTERM
+Oct 18 04:11:28 host systemd[1]: Stopping Simple Desktop Display Manager...
+Oct 18 04:11:30 host sddm[82132]: Auth: sddm-helper exited with 255
+Oct 18 04:11:30 host sddm[82132]: Socket server stopping...
+Oct 18 04:11:30 host sddm[82132]: Socket server stopped.
+Oct 18 04:11:30 host systemd[1]: sddm.service: Deactivated successfully.
+Oct 18 04:11:30 host systemd[1]: Stopped Simple Desktop Display Manager.
+Oct 18 04:11:30 host systemd[1]: Started Simple Desktop Display Manager.
+Oct 18 04:11:30 host sddm[84399]: Initializing...
+Oct 18 04:11:30 host sddm[84399]: Starting...
+Oct 18 04:11:30 host sddm[84399]: Logind interface found
+Oct 18 04:11:30 host sddm[84399]: Adding new display...
+Oct 18 04:11:30 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:11:30 host sddm[84399]: Using VT 1
+Oct 18 04:11:30 host sddm[84399]: Display server started.
+Oct 18 04:11:30 host sddm[84399]: Socket server starting...
+Oct 18 04:11:30 host sddm[84399]: Socket server started.
+Oct 18 04:11:30 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:11:30 host sddm[84399]: Greeter starting...
+Oct 18 04:11:30 host sddm-helper[84403]: [PAM] Starting...
+Oct 18 04:11:30 host sddm-helper[84403]: [PAM] Authenticating...
+Oct 18 04:11:30 host sddm-helper[84403]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:11:30 host sddm-helper[84403]: [PAM] returning.
+Oct 18 04:11:30 host sddm[84399]: Greeter session started successfully
+Oct 18 04:11:30 host sddm-helper[84403]: [PAM] Closing session
+Oct 18 04:11:30 host sddm-helper[84403]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:11:30 host sddm-helper[84403]: [PAM] Ended.
+Oct 18 04:11:30 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:11:30 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:11:30 host sddm[84399]: Removing display SDDM::Display(0x56340f62d240) ...
+Oct 18 04:11:30 host sddm[84399]: Socket server stopping...
+Oct 18 04:11:30 host sddm[84399]: Socket server stopped.
+Oct 18 04:11:30 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:11:30 host sddm[84399]: Adding new display...
+Oct 18 04:11:30 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:11:30 host sddm[84399]: Using VT 1
+Oct 18 04:11:30 host sddm[84399]: Display server started.
+Oct 18 04:11:30 host sddm[84399]: Socket server starting...
+Oct 18 04:11:30 host sddm[84399]: Socket server started.
+Oct 18 04:11:30 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:11:30 host sddm[84399]: Greeter starting...
+Oct 18 04:11:30 host sddm-helper[84478]: [PAM] Starting...
+Oct 18 04:11:30 host sddm-helper[84478]: [PAM] Authenticating...
+Oct 18 04:11:30 host sddm-helper[84478]: [PAM] returning.
+Oct 18 04:11:30 host sddm-helper[84478]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:11:30 host sddm-helper[84478]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--UdoFTn --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:11:30 host sddm[84399]: Greeter session started successfully
+Oct 18 04:11:31 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:11:35 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:11:35 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:11:35 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:11:35 host sddm-helper[85140]: [PAM] Starting...
+Oct 18 04:11:35 host sddm-helper[85140]: [PAM] Authenticating...
+Oct 18 04:11:36 host sddm-helper[85140]: [PAM] Preparing to converse...
+Oct 18 04:11:36 host sddm-helper[85140]: [PAM] Conversation with 1 messages
+Oct 18 04:11:36 host sddm-helper[85140]: gkr-pam: unable to locate daemon control file
+Oct 18 04:11:36 host sddm-helper[85140]: gkr-pam: stashed password to try later in open session
+Oct 18 04:11:36 host sddm-helper[85140]: [PAM] returning.
+Oct 18 04:11:36 host sddm-helper[85140]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:11:36 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:11:36 host sddm-helper[85140]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:11:36 host sddm-helper[85140]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:11:36 host sddm-helper[85140]: gkr-pam: unlocked login keyring
+Oct 18 04:11:36 host sddm-helper[85140]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:11:36 host sddm-helper[85140]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:11:36 host sddm[84399]: Session started true
+Oct 18 04:11:41 host sddm[84399]: Greeter stopping...
+Oct 18 04:11:41 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:11:41 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:11:43 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:11:43 host sddm[84399]: Socket server stopping...
+Oct 18 04:11:43 host sddm[84399]: Socket server stopped.
+Oct 18 04:11:43 host sddm[84399]: Removing display SDDM::Display(0x7f13b000a9c0) ...
+Oct 18 04:11:43 host sddm[84399]: Adding new display...
+Oct 18 04:11:43 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:11:43 host sddm[84399]: Using VT 1
+Oct 18 04:11:43 host sddm[84399]: Display server started.
+Oct 18 04:11:43 host sddm[84399]: Socket server starting...
+Oct 18 04:11:43 host sddm[84399]: Socket server started.
+Oct 18 04:11:43 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:11:43 host sddm[84399]: Greeter starting...
+Oct 18 04:11:43 host sddm-helper[86225]: [PAM] Starting...
+Oct 18 04:11:43 host sddm-helper[86225]: [PAM] Authenticating...
+Oct 18 04:11:43 host sddm-helper[86225]: [PAM] returning.
+Oct 18 04:11:43 host sddm-helper[86225]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:11:43 host sddm[84399]: Greeter session started successfully
+Oct 18 04:11:43 host sddm-helper[86225]: [PAM] Closing session
+Oct 18 04:11:43 host sddm-helper[86225]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:11:43 host sddm-helper[86225]: [PAM] Ended.
+Oct 18 04:11:43 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:11:43 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:11:43 host sddm[84399]: Removing display SDDM::Display(0x7f13b000a3c0) ...
+Oct 18 04:11:43 host sddm[84399]: Socket server stopping...
+Oct 18 04:11:43 host sddm[84399]: Socket server stopped.
+Oct 18 04:11:43 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:11:43 host sddm[84399]: Adding new display...
+Oct 18 04:11:43 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:11:43 host sddm[84399]: Using VT 1
+Oct 18 04:11:43 host sddm[84399]: Display server started.
+Oct 18 04:11:43 host sddm[84399]: Socket server starting...
+Oct 18 04:11:43 host sddm[84399]: Socket server started.
+Oct 18 04:11:43 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:11:43 host sddm[84399]: Greeter starting...
+Oct 18 04:11:43 host sddm-helper[86274]: [PAM] Starting...
+Oct 18 04:11:43 host sddm-helper[86274]: [PAM] Authenticating...
+Oct 18 04:11:43 host sddm-helper[86274]: [PAM] returning.
+Oct 18 04:11:43 host sddm-helper[86274]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:11:43 host sddm-helper[86274]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--Rcluny --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:11:43 host sddm[84399]: Greeter session started successfully
+Oct 18 04:11:43 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:11:46 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:11:46 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:11:46 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:11:46 host sddm-helper[86881]: [PAM] Starting...
+Oct 18 04:11:46 host sddm-helper[86881]: [PAM] Authenticating...
+Oct 18 04:11:46 host sddm-helper[86881]: [PAM] Preparing to converse...
+Oct 18 04:11:46 host sddm-helper[86881]: [PAM] Conversation with 1 messages
+Oct 18 04:11:46 host sddm-helper[86881]: gkr-pam: unable to locate daemon control file
+Oct 18 04:11:46 host sddm-helper[86881]: gkr-pam: stashed password to try later in open session
+Oct 18 04:11:46 host sddm-helper[86881]: [PAM] returning.
+Oct 18 04:11:46 host sddm-helper[86881]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:11:46 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:11:46 host sddm-helper[86881]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:11:46 host sddm-helper[86881]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:11:46 host sddm-helper[86881]: gkr-pam: unlocked login keyring
+Oct 18 04:11:46 host sddm-helper[86881]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:11:46 host sddm-helper[86881]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:11:46 host sddm[84399]: Session started true
+Oct 18 04:11:51 host sddm[84399]: Greeter stopping...
+Oct 18 04:11:52 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:11:52 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:11:52 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:11:52 host sddm[84399]: Socket server stopping...
+Oct 18 04:11:52 host sddm[84399]: Socket server stopped.
+Oct 18 04:11:52 host sddm[84399]: Removing display SDDM::Display(0x7f13b000ce20) ...
+Oct 18 04:11:52 host sddm[84399]: Adding new display...
+Oct 18 04:11:52 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:11:52 host sddm[84399]: Using VT 1
+Oct 18 04:11:52 host sddm[84399]: Display server started.
+Oct 18 04:11:52 host sddm[84399]: Socket server starting...
+Oct 18 04:11:52 host sddm[84399]: Socket server started.
+Oct 18 04:11:52 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:11:52 host sddm[84399]: Greeter starting...
+Oct 18 04:11:52 host sddm-helper[87853]: [PAM] Starting...
+Oct 18 04:11:52 host sddm-helper[87853]: [PAM] Authenticating...
+Oct 18 04:11:52 host sddm-helper[87853]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:11:52 host sddm-helper[87853]: [PAM] returning.
+Oct 18 04:11:52 host sddm[84399]: Greeter session started successfully
+Oct 18 04:11:52 host sddm-helper[87853]: [PAM] Closing session
+Oct 18 04:11:52 host sddm-helper[87853]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:11:52 host sddm-helper[87853]: [PAM] Ended.
+Oct 18 04:11:52 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:11:52 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:11:52 host sddm[84399]: Removing display SDDM::Display(0x7f13b000e6f0) ...
+Oct 18 04:11:52 host sddm[84399]: Socket server stopping...
+Oct 18 04:11:52 host sddm[84399]: Socket server stopped.
+Oct 18 04:11:52 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:11:52 host sddm[84399]: Adding new display...
+Oct 18 04:11:52 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:11:52 host sddm[84399]: Using VT 1
+Oct 18 04:11:52 host sddm[84399]: Display server started.
+Oct 18 04:11:52 host sddm[84399]: Socket server starting...
+Oct 18 04:11:52 host sddm[84399]: Socket server started.
+Oct 18 04:11:52 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:11:52 host sddm[84399]: Greeter starting...
+Oct 18 04:11:52 host sddm-helper[87902]: [PAM] Starting...
+Oct 18 04:11:52 host sddm-helper[87902]: [PAM] Authenticating...
+Oct 18 04:11:52 host sddm-helper[87902]: [PAM] returning.
+Oct 18 04:11:52 host sddm-helper[87902]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:11:52 host sddm-helper[87902]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--RZzcYt --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:11:52 host sddm[84399]: Greeter session started successfully
+Oct 18 04:11:53 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:11:55 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:11:55 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:11:55 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:11:55 host sddm-helper[88506]: [PAM] Starting...
+Oct 18 04:11:55 host sddm-helper[88506]: [PAM] Authenticating...
+Oct 18 04:11:55 host sddm-helper[88506]: [PAM] Preparing to converse...
+Oct 18 04:11:55 host sddm-helper[88506]: [PAM] Conversation with 1 messages
+Oct 18 04:11:55 host sddm-helper[88506]: gkr-pam: unable to locate daemon control file
+Oct 18 04:11:55 host sddm-helper[88506]: gkr-pam: stashed password to try later in open session
+Oct 18 04:11:55 host sddm-helper[88506]: [PAM] returning.
+Oct 18 04:11:55 host sddm-helper[88506]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:11:55 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:11:55 host sddm-helper[88506]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:11:55 host sddm-helper[88506]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:11:55 host sddm-helper[88506]: gkr-pam: unlocked login keyring
+Oct 18 04:11:55 host sddm-helper[88506]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:11:55 host sddm-helper[88506]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:11:55 host sddm[84399]: Session started true
+Oct 18 04:12:01 host sddm[84399]: Greeter stopping...
+Oct 18 04:12:01 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:12:01 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:12:01 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:12:01 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:01 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:01 host sddm[84399]: Removing display SDDM::Display(0x7f13b0009d70) ...
+Oct 18 04:12:01 host sddm[84399]: Adding new display...
+Oct 18 04:12:01 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:01 host sddm[84399]: Using VT 1
+Oct 18 04:12:01 host sddm[84399]: Display server started.
+Oct 18 04:12:01 host sddm[84399]: Socket server starting...
+Oct 18 04:12:01 host sddm[84399]: Socket server started.
+Oct 18 04:12:01 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:01 host sddm[84399]: Greeter starting...
+Oct 18 04:12:01 host sddm-helper[89521]: [PAM] Starting...
+Oct 18 04:12:01 host sddm-helper[89521]: [PAM] Authenticating...
+Oct 18 04:12:01 host sddm-helper[89521]: [PAM] returning.
+Oct 18 04:12:01 host sddm-helper[89521]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:01 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:01 host sddm-helper[89521]: [PAM] Closing session
+Oct 18 04:12:01 host sddm-helper[89521]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:12:01 host sddm-helper[89521]: [PAM] Ended.
+Oct 18 04:12:01 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:12:01 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:12:01 host sddm[84399]: Removing display SDDM::Display(0x7f13b00095d0) ...
+Oct 18 04:12:01 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:01 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:01 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:12:01 host sddm[84399]: Adding new display...
+Oct 18 04:12:01 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:01 host sddm[84399]: Using VT 1
+Oct 18 04:12:01 host sddm[84399]: Display server started.
+Oct 18 04:12:01 host sddm[84399]: Socket server starting...
+Oct 18 04:12:01 host sddm[84399]: Socket server started.
+Oct 18 04:12:01 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:01 host sddm[84399]: Greeter starting...
+Oct 18 04:12:01 host sddm-helper[89619]: [PAM] Starting...
+Oct 18 04:12:01 host sddm-helper[89619]: [PAM] Authenticating...
+Oct 18 04:12:01 host sddm-helper[89619]: [PAM] returning.
+Oct 18 04:12:01 host sddm-helper[89619]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:01 host sddm-helper[89619]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--kLAxHf --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:12:01 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:02 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:12:07 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:12:07 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:12:07 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:12:07 host sddm-helper[90230]: [PAM] Starting...
+Oct 18 04:12:07 host sddm-helper[90230]: [PAM] Authenticating...
+Oct 18 04:12:07 host sddm-helper[90230]: [PAM] Preparing to converse...
+Oct 18 04:12:07 host sddm-helper[90230]: [PAM] Conversation with 1 messages
+Oct 18 04:12:07 host sddm-helper[90230]: gkr-pam: unable to locate daemon control file
+Oct 18 04:12:07 host sddm-helper[90230]: gkr-pam: stashed password to try later in open session
+Oct 18 04:12:07 host sddm-helper[90230]: [PAM] returning.
+Oct 18 04:12:07 host sddm-helper[90230]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:12:07 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:12:07 host sddm-helper[90230]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:12:07 host sddm-helper[90230]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:12:07 host sddm-helper[90230]: gkr-pam: unlocked login keyring
+Oct 18 04:12:07 host sddm-helper[90230]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:12:07 host sddm-helper[90230]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:12:07 host sddm[84399]: Session started true
+Oct 18 04:12:13 host sddm[84399]: Greeter stopping...
+Oct 18 04:12:13 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:12:13 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:12:13 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:12:13 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:13 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:13 host sddm[84399]: Removing display SDDM::Display(0x7f13b0009930) ...
+Oct 18 04:12:13 host sddm[84399]: Adding new display...
+Oct 18 04:12:13 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:13 host sddm[84399]: Using VT 1
+Oct 18 04:12:13 host sddm[84399]: Display server started.
+Oct 18 04:12:13 host sddm[84399]: Socket server starting...
+Oct 18 04:12:13 host sddm[84399]: Socket server started.
+Oct 18 04:12:13 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:13 host sddm[84399]: Greeter starting...
+Oct 18 04:12:13 host sddm-helper[91265]: [PAM] Starting...
+Oct 18 04:12:13 host sddm-helper[91265]: [PAM] Authenticating...
+Oct 18 04:12:13 host sddm-helper[91265]: [PAM] returning.
+Oct 18 04:12:13 host sddm-helper[91265]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:13 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:13 host sddm-helper[91265]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:12:13 host sddm-helper[91265]: [PAM] Closing session
+Oct 18 04:12:13 host sddm-helper[91265]: [PAM] Ended.
+Oct 18 04:12:13 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:12:13 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:12:13 host sddm[84399]: Removing display SDDM::Display(0x7f13b000df30) ...
+Oct 18 04:12:13 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:13 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:13 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:12:13 host sddm[84399]: Adding new display...
+Oct 18 04:12:13 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:13 host sddm[84399]: Using VT 1
+Oct 18 04:12:13 host sddm[84399]: Display server started.
+Oct 18 04:12:13 host sddm[84399]: Socket server starting...
+Oct 18 04:12:13 host sddm[84399]: Socket server started.
+Oct 18 04:12:13 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:13 host sddm[84399]: Greeter starting...
+Oct 18 04:12:13 host sddm-helper[91277]: [PAM] Starting...
+Oct 18 04:12:13 host sddm-helper[91277]: [PAM] Authenticating...
+Oct 18 04:12:13 host sddm-helper[91277]: [PAM] returning.
+Oct 18 04:12:13 host sddm-helper[91277]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:13 host sddm-helper[91277]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--ekLPku --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:12:13 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:13 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:12:16 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:12:16 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:12:16 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:12:16 host sddm-helper[91888]: [PAM] Starting...
+Oct 18 04:12:16 host sddm-helper[91888]: [PAM] Authenticating...
+Oct 18 04:12:16 host sddm-helper[91888]: [PAM] Preparing to converse...
+Oct 18 04:12:16 host sddm-helper[91888]: [PAM] Conversation with 1 messages
+Oct 18 04:12:16 host sddm-helper[91888]: gkr-pam: unable to locate daemon control file
+Oct 18 04:12:16 host sddm-helper[91888]: gkr-pam: stashed password to try later in open session
+Oct 18 04:12:16 host sddm-helper[91888]: [PAM] returning.
+Oct 18 04:12:16 host sddm-helper[91888]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:12:16 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:12:16 host sddm-helper[91888]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:12:16 host sddm-helper[91888]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:12:16 host sddm-helper[91888]: gkr-pam: unlocked login keyring
+Oct 18 04:12:16 host sddm-helper[91888]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:12:16 host sddm-helper[91888]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:12:16 host sddm[84399]: Session started true
+Oct 18 04:12:22 host sddm[84399]: Greeter stopping...
+Oct 18 04:12:22 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:12:22 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:12:22 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:12:22 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:22 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:22 host sddm[84399]: Removing display SDDM::Display(0x7f13b000f7f0) ...
+Oct 18 04:12:22 host sddm[84399]: Adding new display...
+Oct 18 04:12:22 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:22 host sddm[84399]: Using VT 1
+Oct 18 04:12:22 host sddm[84399]: Display server started.
+Oct 18 04:12:22 host sddm[84399]: Socket server starting...
+Oct 18 04:12:22 host sddm[84399]: Socket server started.
+Oct 18 04:12:22 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:22 host sddm[84399]: Greeter starting...
+Oct 18 04:12:22 host sddm-helper[92855]: [PAM] Starting...
+Oct 18 04:12:22 host sddm-helper[92855]: [PAM] Authenticating...
+Oct 18 04:12:22 host sddm-helper[92855]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:22 host sddm-helper[92855]: [PAM] returning.
+Oct 18 04:12:22 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:22 host sddm-helper[92855]: [PAM] Closing session
+Oct 18 04:12:22 host sddm-helper[92855]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:12:22 host sddm-helper[92855]: [PAM] Ended.
+Oct 18 04:12:22 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:12:22 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:12:22 host sddm[84399]: Removing display SDDM::Display(0x7f13b0010a40) ...
+Oct 18 04:12:22 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:22 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:22 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:12:22 host sddm[84399]: Adding new display...
+Oct 18 04:12:22 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:22 host sddm[84399]: Using VT 1
+Oct 18 04:12:22 host sddm[84399]: Display server started.
+Oct 18 04:12:22 host sddm[84399]: Socket server starting...
+Oct 18 04:12:22 host sddm[84399]: Socket server started.
+Oct 18 04:12:22 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:22 host sddm[84399]: Greeter starting...
+Oct 18 04:12:22 host sddm-helper[92900]: [PAM] Starting...
+Oct 18 04:12:22 host sddm-helper[92900]: [PAM] Authenticating...
+Oct 18 04:12:22 host sddm-helper[92900]: [PAM] returning.
+Oct 18 04:12:22 host sddm-helper[92900]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:22 host sddm-helper[92900]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--PizRpf --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:12:22 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:22 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:12:24 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:12:24 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:12:24 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:12:24 host sddm-helper[93462]: [PAM] Starting...
+Oct 18 04:12:24 host sddm-helper[93462]: [PAM] Authenticating...
+Oct 18 04:12:24 host sddm-helper[93462]: [PAM] Preparing to converse...
+Oct 18 04:12:24 host sddm-helper[93462]: [PAM] Conversation with 1 messages
+Oct 18 04:12:25 host sddm-helper[93462]: gkr-pam: unable to locate daemon control file
+Oct 18 04:12:25 host sddm-helper[93462]: gkr-pam: stashed password to try later in open session
+Oct 18 04:12:25 host sddm-helper[93462]: [PAM] returning.
+Oct 18 04:12:25 host sddm-helper[93462]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:12:25 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:12:25 host sddm-helper[93462]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:12:25 host sddm-helper[93462]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:12:25 host sddm-helper[93462]: gkr-pam: unlocked login keyring
+Oct 18 04:12:25 host sddm-helper[93462]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:12:25 host sddm-helper[93462]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:12:25 host sddm[84399]: Session started true
+Oct 18 04:12:30 host sddm[84399]: Greeter stopping...
+Oct 18 04:12:30 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:12:30 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:12:30 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:12:30 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:30 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:30 host sddm[84399]: Removing display SDDM::Display(0x7f13b000d630) ...
+Oct 18 04:12:30 host sddm[84399]: Adding new display...
+Oct 18 04:12:30 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:30 host sddm[84399]: Using VT 1
+Oct 18 04:12:30 host sddm[84399]: Display server started.
+Oct 18 04:12:30 host sddm[84399]: Socket server starting...
+Oct 18 04:12:30 host sddm[84399]: Socket server started.
+Oct 18 04:12:30 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:30 host sddm[84399]: Greeter starting...
+Oct 18 04:12:30 host sddm-helper[93904]: [PAM] Starting...
+Oct 18 04:12:30 host sddm-helper[93904]: [PAM] Authenticating...
+Oct 18 04:12:30 host sddm-helper[93904]: [PAM] returning.
+Oct 18 04:12:30 host sddm-helper[93904]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:30 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:30 host sddm-helper[93904]: [PAM] Closing session
+Oct 18 04:12:30 host sddm-helper[93904]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:12:30 host sddm-helper[93904]: [PAM] Ended.
+Oct 18 04:12:30 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:12:30 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:12:30 host sddm[84399]: Removing display SDDM::Display(0x7f13b000a420) ...
+Oct 18 04:12:30 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:30 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:30 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:12:30 host sddm[84399]: Adding new display...
+Oct 18 04:12:30 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:30 host sddm[84399]: Using VT 1
+Oct 18 04:12:30 host sddm[84399]: Display server started.
+Oct 18 04:12:30 host sddm[84399]: Socket server starting...
+Oct 18 04:12:30 host sddm[84399]: Socket server started.
+Oct 18 04:12:30 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:30 host sddm[84399]: Greeter starting...
+Oct 18 04:12:30 host sddm-helper[93923]: [PAM] Starting...
+Oct 18 04:12:30 host sddm-helper[93923]: [PAM] Authenticating...
+Oct 18 04:12:30 host sddm-helper[93923]: [PAM] returning.
+Oct 18 04:12:30 host sddm-helper[93923]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:30 host sddm-helper[93923]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--sBTOYr --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:12:30 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:30 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:12:33 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:12:33 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:12:33 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:12:33 host sddm-helper[94035]: [PAM] Starting...
+Oct 18 04:12:33 host sddm-helper[94035]: [PAM] Authenticating...
+Oct 18 04:12:33 host sddm-helper[94035]: [PAM] Preparing to converse...
+Oct 18 04:12:33 host sddm-helper[94035]: [PAM] Conversation with 1 messages
+Oct 18 04:12:33 host unix_chkpwd[94040]: password check failed for user (user)
+Oct 18 04:12:33 host sddm-helper[94035]: pam_unix(sddm:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=user
+Oct 18 04:12:35 host sddm-helper[94035]: [PAM] authenticate: Authentication failure
+Oct 18 04:12:35 host sddm-helper[94035]: [PAM] returning.
+Oct 18 04:12:35 host sddm-helper[94035]: [PAM] Asked to close the session but it wasn't previously open
+Oct 18 04:12:35 host sddm[84399]: Authentication error: SDDM::Auth::ERROR_AUTHENTICATION "Authentication failure"
+Oct 18 04:12:35 host sddm[84399]: Authentication for user  ""  failed
+Oct 18 04:12:35 host sddm-helper[94035]: [PAM] Ended.
+Oct 18 04:12:35 host sddm[84399]: Auth: sddm-helper exited with 1
+Oct 18 04:12:37 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:12:37 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:12:37 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:12:37 host sddm-helper[94084]: [PAM] Starting...
+Oct 18 04:12:37 host sddm-helper[94084]: [PAM] Authenticating...
+Oct 18 04:12:37 host sddm-helper[94084]: [PAM] Preparing to converse...
+Oct 18 04:12:37 host sddm-helper[94084]: [PAM] Conversation with 1 messages
+Oct 18 04:12:37 host sddm-helper[94084]: gkr-pam: unable to locate daemon control file
+Oct 18 04:12:37 host sddm-helper[94084]: gkr-pam: stashed password to try later in open session
+Oct 18 04:12:37 host sddm-helper[94084]: [PAM] returning.
+Oct 18 04:12:37 host sddm-helper[94084]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:12:37 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:12:37 host sddm-helper[94084]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:12:37 host sddm-helper[94084]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:12:37 host sddm-helper[94084]: gkr-pam: unlocked login keyring
+Oct 18 04:12:37 host sddm-helper[94084]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:12:37 host sddm-helper[94084]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:12:37 host sddm[84399]: Session started true
+Oct 18 04:12:43 host sddm[84399]: Greeter stopping...
+Oct 18 04:12:43 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:12:43 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:12:43 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:12:43 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:43 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:43 host sddm[84399]: Removing display SDDM::Display(0x7f13b0008140) ...
+Oct 18 04:12:43 host sddm[84399]: Adding new display...
+Oct 18 04:12:43 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:43 host sddm[84399]: Using VT 1
+Oct 18 04:12:43 host sddm[84399]: Display server started.
+Oct 18 04:12:43 host sddm[84399]: Socket server starting...
+Oct 18 04:12:43 host sddm[84399]: Socket server started.
+Oct 18 04:12:43 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:43 host sddm[84399]: Greeter starting...
+Oct 18 04:12:43 host sddm-helper[94643]: [PAM] Starting...
+Oct 18 04:12:43 host sddm-helper[94643]: [PAM] Authenticating...
+Oct 18 04:12:43 host sddm-helper[94643]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:43 host sddm-helper[94643]: [PAM] returning.
+Oct 18 04:12:43 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:43 host sddm-helper[94643]: [PAM] Closing session
+Oct 18 04:12:43 host sddm-helper[94643]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:12:43 host sddm-helper[94643]: [PAM] Ended.
+Oct 18 04:12:43 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:12:43 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:12:43 host sddm[84399]: Removing display SDDM::Display(0x7f13b000df30) ...
+Oct 18 04:12:43 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:43 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:43 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:12:43 host sddm[84399]: Adding new display...
+Oct 18 04:12:43 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:43 host sddm[84399]: Using VT 1
+Oct 18 04:12:43 host sddm[84399]: Display server started.
+Oct 18 04:12:43 host sddm[84399]: Socket server starting...
+Oct 18 04:12:43 host sddm[84399]: Socket server started.
+Oct 18 04:12:43 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:43 host sddm[84399]: Greeter starting...
+Oct 18 04:12:43 host sddm-helper[94656]: [PAM] Starting...
+Oct 18 04:12:43 host sddm-helper[94656]: [PAM] Authenticating...
+Oct 18 04:12:43 host sddm-helper[94656]: [PAM] returning.
+Oct 18 04:12:43 host sddm-helper[94656]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:43 host sddm-helper[94656]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--TBnMLs --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:12:43 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:43 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:12:46 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:12:46 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:12:46 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:12:46 host sddm-helper[94787]: [PAM] Starting...
+Oct 18 04:12:46 host sddm-helper[94787]: [PAM] Authenticating...
+Oct 18 04:12:46 host sddm-helper[94787]: [PAM] Preparing to converse...
+Oct 18 04:12:46 host sddm-helper[94787]: [PAM] Conversation with 1 messages
+Oct 18 04:12:46 host sddm-helper[94787]: gkr-pam: unable to locate daemon control file
+Oct 18 04:12:46 host sddm-helper[94787]: gkr-pam: stashed password to try later in open session
+Oct 18 04:12:46 host sddm-helper[94787]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:12:46 host sddm-helper[94787]: [PAM] returning.
+Oct 18 04:12:46 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:12:46 host sddm-helper[94787]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:12:46 host sddm-helper[94787]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:12:46 host sddm-helper[94787]: gkr-pam: unlocked login keyring
+Oct 18 04:12:46 host sddm-helper[94787]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:12:46 host sddm-helper[94787]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:12:46 host sddm[84399]: Session started true
+Oct 18 04:12:51 host sddm[84399]: Greeter stopping...
+Oct 18 04:12:51 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:12:51 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:12:53 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:12:53 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:53 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:53 host sddm[84399]: Removing display SDDM::Display(0x7f13b0012c90) ...
+Oct 18 04:12:53 host sddm[84399]: Adding new display...
+Oct 18 04:12:53 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:53 host sddm[84399]: Using VT 1
+Oct 18 04:12:53 host sddm[84399]: Display server started.
+Oct 18 04:12:53 host sddm[84399]: Socket server starting...
+Oct 18 04:12:53 host sddm[84399]: Socket server started.
+Oct 18 04:12:53 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:53 host sddm[84399]: Greeter starting...
+Oct 18 04:12:53 host sddm-helper[95386]: [PAM] Starting...
+Oct 18 04:12:53 host sddm-helper[95386]: [PAM] Authenticating...
+Oct 18 04:12:53 host sddm-helper[95386]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:53 host sddm-helper[95386]: [PAM] returning.
+Oct 18 04:12:53 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:53 host sddm-helper[95386]: [PAM] Closing session
+Oct 18 04:12:53 host sddm-helper[95386]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:12:53 host sddm-helper[95386]: [PAM] Ended.
+Oct 18 04:12:53 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:12:53 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:12:53 host sddm[84399]: Removing display SDDM::Display(0x7f13b00108c0) ...
+Oct 18 04:12:53 host sddm[84399]: Socket server stopping...
+Oct 18 04:12:53 host sddm[84399]: Socket server stopped.
+Oct 18 04:12:53 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:12:53 host sddm[84399]: Adding new display...
+Oct 18 04:12:53 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:12:53 host sddm[84399]: Using VT 1
+Oct 18 04:12:53 host sddm[84399]: Display server started.
+Oct 18 04:12:53 host sddm[84399]: Socket server starting...
+Oct 18 04:12:53 host sddm[84399]: Socket server started.
+Oct 18 04:12:53 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:12:53 host sddm[84399]: Greeter starting...
+Oct 18 04:12:53 host sddm-helper[95435]: [PAM] Starting...
+Oct 18 04:12:53 host sddm-helper[95435]: [PAM] Authenticating...
+Oct 18 04:12:53 host sddm-helper[95435]: [PAM] returning.
+Oct 18 04:12:53 host sddm-helper[95435]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:12:53 host sddm-helper[95435]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--qovNHf --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:12:53 host sddm[84399]: Greeter session started successfully
+Oct 18 04:12:54 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:12:57 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:12:57 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:12:57 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:12:57 host sddm-helper[95559]: [PAM] Starting...
+Oct 18 04:12:57 host sddm-helper[95559]: [PAM] Authenticating...
+Oct 18 04:12:57 host sddm-helper[95559]: [PAM] Preparing to converse...
+Oct 18 04:12:57 host sddm-helper[95559]: [PAM] Conversation with 1 messages
+Oct 18 04:12:57 host sddm-helper[95559]: gkr-pam: unable to locate daemon control file
+Oct 18 04:12:57 host sddm-helper[95559]: gkr-pam: stashed password to try later in open session
+Oct 18 04:12:57 host sddm-helper[95559]: [PAM] returning.
+Oct 18 04:12:57 host sddm-helper[95559]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:12:57 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:12:57 host sddm-helper[95559]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:12:57 host sddm-helper[95559]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:12:57 host sddm-helper[95559]: gkr-pam: unlocked login keyring
+Oct 18 04:12:57 host sddm-helper[95559]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:12:57 host sddm-helper[95559]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:12:57 host sddm[84399]: Session started true
+Oct 18 04:13:02 host sddm[84399]: Greeter stopping...
+Oct 18 04:13:03 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:13:03 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)
+Oct 18 04:13:03 host sddm[84399]: Auth: sddm-helper exited successfully
+Oct 18 04:13:03 host sddm[84399]: Socket server stopping...
+Oct 18 04:13:03 host sddm[84399]: Socket server stopped.
+Oct 18 04:13:03 host sddm[84399]: Removing display SDDM::Display(0x7f13b0009d70) ...
+Oct 18 04:13:03 host sddm[84399]: Adding new display...
+Oct 18 04:13:03 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:13:03 host sddm[84399]: Using VT 1
+Oct 18 04:13:03 host sddm[84399]: Display server started.
+Oct 18 04:13:03 host sddm[84399]: Socket server starting...
+Oct 18 04:13:03 host sddm[84399]: Socket server started.
+Oct 18 04:13:03 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:13:03 host sddm[84399]: Greeter starting...
+Oct 18 04:13:03 host sddm-helper[96053]: [PAM] Starting...
+Oct 18 04:13:03 host sddm-helper[96053]: [PAM] Authenticating...
+Oct 18 04:13:03 host sddm-helper[96053]: [PAM] returning.
+Oct 18 04:13:03 host sddm-helper[96053]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:13:03 host sddm[84399]: Greeter session started successfully
+Oct 18 04:13:03 host sddm-helper[96053]: [PAM] Closing session
+Oct 18 04:13:03 host sddm-helper[96053]: pam_unix(sddm-greeter:session): session closed for user sddm
+Oct 18 04:13:03 host sddm-helper[96053]: [PAM] Ended.
+Oct 18 04:13:03 host sddm[84399]: Auth: sddm-helper exited with 4
+Oct 18 04:13:03 host sddm[84399]: Greeter stopped. SDDM::Auth::HELPER_DISPLAYSERVER_ERROR
+Oct 18 04:13:03 host sddm[84399]: Removing display SDDM::Display(0x7f13b0013c80) ...
+Oct 18 04:13:03 host sddm[84399]: Socket server stopping...
+Oct 18 04:13:03 host sddm[84399]: Socket server stopped.
+Oct 18 04:13:03 host sddm[84399]: Failed to launch the display server, falling back to DisplayServer=x11-user
+Oct 18 04:13:03 host sddm[84399]: Adding new display...
+Oct 18 04:13:03 host sddm[84399]: Loaded empty theme configuration
+Oct 18 04:13:03 host sddm[84399]: Using VT 1
+Oct 18 04:13:03 host sddm[84399]: Display server started.
+Oct 18 04:13:03 host sddm[84399]: Socket server starting...
+Oct 18 04:13:03 host sddm[84399]: Socket server started.
+Oct 18 04:13:03 host sddm[84399]: Loading theme configuration from "/usr/share/sddm/themes/Hyprlain/theme.conf"
+Oct 18 04:13:03 host sddm[84399]: Greeter starting...
+Oct 18 04:13:03 host sddm-helper[96087]: [PAM] Starting...
+Oct 18 04:13:03 host sddm-helper[96087]: [PAM] Authenticating...
+Oct 18 04:13:03 host sddm-helper[96087]: [PAM] returning.
+Oct 18 04:13:03 host sddm-helper[96087]: pam_unix(sddm-greeter:session): session opened for user sddm(uid=949) by (uid=0)
+Oct 18 04:13:03 host sddm-helper[96087]: Starting X11 session: "/usr/bin/X -nolisten tcp -background none -seat seat0 -noreset -keeptty -novtswitch -verbose 3" "/usr/bin/sddm-greeter --socket /tmp/sddm--iPQWDa --theme /usr/share/sddm/themes/Hyprlain"
+Oct 18 04:13:03 host sddm[84399]: Greeter session started successfully
+Oct 18 04:13:03 host sddm[84399]: Message received from greeter: Connect
+Oct 18 04:13:05 host sddm[84399]: Message received from greeter: Login
+Oct 18 04:13:05 host sddm[84399]: Reading from "/usr/share/wayland-sessions/hyprland.desktop"
+Oct 18 04:13:05 host sddm[84399]: Session "/usr/share/wayland-sessions/hyprland.desktop" selected, command: "/usr/bin/start-hyprland" for VT 7
+Oct 18 04:13:05 host sddm-helper[96222]: [PAM] Starting...
+Oct 18 04:13:05 host sddm-helper[96222]: [PAM] Authenticating...
+Oct 18 04:13:06 host sddm-helper[96222]: [PAM] Preparing to converse...
+Oct 18 04:13:06 host sddm-helper[96222]: [PAM] Conversation with 1 messages
+Oct 18 04:13:06 host sddm-helper[96222]: gkr-pam: unable to locate daemon control file
+Oct 18 04:13:06 host sddm-helper[96222]: gkr-pam: stashed password to try later in open session
+Oct 18 04:13:06 host sddm-helper[96222]: [PAM] returning.
+Oct 18 04:13:06 host sddm-helper[96222]: pam_kwallet5(sddm:auth): pam_kwallet5: pam_sm_authenticate
+Oct 18 04:13:06 host sddm[84399]: Authentication for user  "user"  successful
+Oct 18 04:13:06 host sddm-helper[96222]: pam_kwallet5(sddm:setcred): pam_kwallet5: pam_sm_setcred
+Oct 18 04:13:06 host sddm-helper[96222]: pam_unix(sddm:session): session opened for user user(uid=1000) by user(uid=0)
+Oct 18 04:13:06 host sddm-helper[96222]: gkr-pam: unlocked login keyring
+Oct 18 04:13:06 host sddm-helper[96222]: pam_kwallet5(sddm:session): pam_kwallet5: pam_sm_open_session
+Oct 18 04:13:06 host sddm-helper[96222]: Starting Wayland user session: "/usr/share/sddm/scripts/wayland-session" "/usr/bin/start-hyprland"
+Oct 18 04:13:06 host sddm[84399]: Session started true
+Oct 18 04:13:11 host sddm[84399]: Greeter stopping...
+Oct 18 04:13:11 host sddm[84399]: Auth: sddm-helper exited with 255
+Oct 18 04:13:11 host sddm[84399]: Greeter stopped. SDDM::Auth::HelperExitStatus(255)

@@ -1,0 +1,36 @@
+From da0b64d8e2378c4bce16cbea6cac2ffc89ad1a4a Mon Sep 17 00:00:00 2001
+From: Daniel Betz <dnlbtz@gmail.com>
+Date: Wed, 12 Aug 2026 18:15:00 +0200
+Subject: [PATCH] greeter: Don't quit when the last window closes
+
+GreeterApp creates a QQuickView per QScreen and destroys it again in
+removeViewForScreen(). With a single display, unplugging the monitor drops
+the window count to zero and QGuiApplication's default quitOnLastWindowClosed
+makes the greeter exit with status 0.
+
+The daemon takes that for a successful exit and does not start a new greeter,
+so the seat is left on a bare console while sddm.service is still active.
+
+Fixes #2211
+---
+ src/greeter/GreeterApp.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/greeter/GreeterApp.cpp b/src/greeter/GreeterApp.cpp
+index be4f9f0..a8a456a 100644
+--- a/src/greeter/GreeterApp.cpp
++++ b/src/greeter/GreeterApp.cpp
+@@ -361,6 +361,10 @@ int main(int argc, char **argv)
+         qputenv("QT_IM_MODULE", inputMethod.toLocal8Bit());
+ 
+     QGuiApplication app(argc, argv);
++
++    // Don't quit when the last screen and thus the last view disappears
++    app.setQuitOnLastWindowClosed(false);
++
+     SDDM::SignalHandler s;
+     QObject::connect(&s, &SDDM::SignalHandler::sigtermReceived, &app, [] {
+         QCoreApplication::instance()->exit(-1);
+-- 
+2.43.0
+

@@ -1,0 +1,98 @@
+/home/user/vt-trace2.bt:3:2-21: WARNING: Addrspace mismatch
+/args->cmd == 0x5602 || args->cmd == 0x5605 || args->cmd == 0x5606 || args->cmd == 0x5607 || args->cmd == 0x4b3a/
+ ~~~~~~~~~~~~~~~~~~~
+/home/user/vt-trace2.bt:3:25-44: WARNING: Addrspace mismatch
+/args->cmd == 0x5602 || args->cmd == 0x5605 || args->cmd == 0x5606 || args->cmd == 0x5607 || args->cmd == 0x4b3a/
+                        ~~~~~~~~~~~~~~~~~~~
+/home/user/vt-trace2.bt:3:48-67: WARNING: Addrspace mismatch
+/args->cmd == 0x5602 || args->cmd == 0x5605 || args->cmd == 0x5606 || args->cmd == 0x5607 || args->cmd == 0x4b3a/
+                                               ~~~~~~~~~~~~~~~~~~~
+/home/user/vt-trace2.bt:3:71-90: WARNING: Addrspace mismatch
+/args->cmd == 0x5602 || args->cmd == 0x5605 || args->cmd == 0x5606 || args->cmd == 0x5607 || args->cmd == 0x4b3a/
+                                                                      ~~~~~~~~~~~~~~~~~~~
+/home/user/vt-trace2.bt:3:94-113: WARNING: Addrspace mismatch
+/args->cmd == 0x5602 || args->cmd == 0x5605 || args->cmd == 0x5606 || args->cmd == 0x5607 || args->cmd == 0x4b3a/
+                                                                                             ~~~~~~~~~~~~~~~~~~~
+Attached 10 probes
+ready
+58260860 ms IOCTL systemd-logind[803] cmd=0x4b3a
+58261812 ms IOCTL systemd-logind[803] cmd=0x5602
+58263069 ms IOCTL sddm-helper[363867] cmd=0x4b3a
+58263069 ms IOCTL sddm-helper[363867] cmd=0x5602
+58263069 ms IOCTL sddm-helper[363867] cmd=0x5606
+58263069 ms IOCTL sddm-helper[363867] cmd=0x5607
+58263069 ms KERNEL change_console by kworker/3:2[220553]
+58263069 ms KERNEL complete_change_console
+58263069 ms IOCTL sddm-helper[363867] cmd=0x5605
+58263112 ms IOCTL sddm-helper[363921] cmd=0x4b3a
+58263113 ms IOCTL sddm-helper[363921] cmd=0x5602
+58263113 ms IOCTL sddm-helper[363921] cmd=0x5606
+58263113 ms IOCTL sddm-helper[363921] cmd=0x5607
+58263195 ms IOCTL systemd-logind[803] cmd=0x4b3a
+58263195 ms IOCTL systemd-logind[803] cmd=0x5602
+58263204 ms IOCTL Xorg[363922] cmd=0x5606
+58263204 ms IOCTL Xorg[363922] cmd=0x5607
+58263204 ms IOCTL Xorg[363922] cmd=0x5602
+58263204 ms IOCTL Xorg[363922] cmd=0x4b3a
+58263475 ms SIGNAL-DELIVERED sig=17 to Xorg[363922]
+58263581 ms SIGNAL-DELIVERED sig=17 to Xorg[363922]
+58268652 ms EXIT sddm-greeter[363939]
+58268658 ms SIGNAL-SENT sig=15 from sddm-helper-sta[363921] to Xorg[363922]
+58268658 ms SIGNAL-DELIVERED sig=15 to Xorg[363922]
+58268695 ms IOCTL sddm-helper[365107] cmd=0x4b3a
+58268695 ms IOCTL sddm-helper[365107] cmd=0x5602
+58268695 ms IOCTL sddm-helper[365107] cmd=0x5606
+58268695 ms IOCTL sddm-helper[365107] cmd=0x5607
+58268695 ms KERNEL change_console by kworker/7:0[361599]
+58268695 ms SIGNAL-SENT sig=10 from kworker/7:0[361599] to Xorg[363922]
+58268698 ms SIGNAL-DELIVERED sig=10 to Xorg[363922]
+58268698 ms XORG xf86VTRequest
+58268743 ms IOCTL Xorg[363922] cmd=0x4b3a
+58268751 ms IOCTL Xorg[363922] cmd=0x5602
+58268751 ms IOCTL systemd-logind[803] cmd=0x4b3a
+58268751 ms IOCTL systemd-logind[803] cmd=0x5602
+58268753 ms EXIT Xorg[363922]
+58298792 ms IOCTL sddm-helper[365107] cmd=0x5606
+58298792 ms IOCTL sddm-helper[365107] cmd=0x5607
+58298792 ms KERNEL change_console by kworker/7:2[312366]
+58298792 ms KERNEL complete_change_console
+58298792 ms IOCTL sddm-helper[365107] cmd=0x5605
+58298955 ms IOCTL systemd-logind[803] cmd=0x4b3a
+58298955 ms IOCTL systemd-logind[803] cmd=0x5602
+58358877 ms IOCTL systemd-logind[803] cmd=0x4b3a
+58358877 ms IOCTL systemd-logind[803] cmd=0x5602
+58358877 ms IOCTL systemd-logind[803] cmd=0x4b3a
+58358916 ms IOCTL systemd-logind[803] cmd=0x5602
+58359029 ms IOCTL sddm-helper[369384] cmd=0x4b3a
+58359029 ms IOCTL sddm-helper[369384] cmd=0x5602
+58359029 ms IOCTL sddm-helper[369384] cmd=0x5606
+58359029 ms IOCTL sddm-helper[369384] cmd=0x5607
+58359029 ms KERNEL change_console by kworker/6:3[276589]
+58359029 ms KERNEL complete_change_console
+58359029 ms IOCTL sddm-helper[369384] cmd=0x5605
+58359029 ms IOCTL sddm-helper[369384] cmd=0x5606
+58359029 ms IOCTL sddm-helper[369384] cmd=0x5607
+58359062 ms IOCTL sddm-helper[369468] cmd=0x4b3a
+58359062 ms IOCTL sddm-helper[369468] cmd=0x5602
+58359062 ms IOCTL sddm-helper[369468] cmd=0x5606
+58359062 ms IOCTL sddm-helper[369468] cmd=0x5607
+58359081 ms IOCTL systemd-logind[803] cmd=0x4b3a
+58359081 ms IOCTL systemd-logind[803] cmd=0x5602
+58360848 ms IOCTL Xorg[369470] cmd=0x5606
+58360848 ms IOCTL Xorg[369470] cmd=0x5607
+58360848 ms IOCTL Xorg[369470] cmd=0x5602
+58360848 ms IOCTL Xorg[369470] cmd=0x4b3a
+58361021 ms SIGNAL-DELIVERED sig=17 to Xorg[369470]
+58361123 ms SIGNAL-DELIVERED sig=17 to Xorg[369470]
+58362566 ms IOCTL Xorg[369470] cmd=0x5606
+58362566 ms KERNEL change_console by kworker/7:2[312366]
+58362566 ms SIGNAL-SENT sig=10 from kworker/7:2[312366] to Xorg[369470]
+58362566 ms SIGNAL-DELIVERED sig=10 to Xorg[369470]
+58362566 ms XORG xf86VTRequest
+58362566 ms XORG xf86VTLeave
+58362577 ms IOCTL Xorg[369470] cmd=0x5605
+58362577 ms KERNEL complete_change_console
+58371167 ms IOCTL systemd-logind[803] cmd=0x4b3a
+58371167 ms IOCTL systemd-logind[803] cmd=0x5602
+
+

@@ -1,0 +1,59 @@
+Attached 15 probes
+ready
+27270255 ms SIGNAL-SENT sig=15 from systemd[1] to Xorg[2296]
+27270255 ms SIGNAL-DELIVERED sig=15 to Xorg[2296]
+27270255 ms XORG GiveUp (SIGTERM handler) [2296]
+27270255 ms XORG xf86Wakeup (after SIGTERM) [2296]
+27270256 ms XORG CloseDownExtensions (main loop already finished) [2296]
+27271244 ms XORG CloseWellKnownConnections [2296]
+27271244 ms XORG ddxGiveUp [2296]
+27271263 ms EXIT Xorg[2296]
+27272333 ms SIGNAL-SENT sig=15 from sddm[2257] to Xorg[2296]
+27272826 ms SIGNAL-DELIVERED sig=17 to Xorg[342593]
+27272929 ms SIGNAL-DELIVERED sig=17 to Xorg[342593]
+27282290 ms SIGNAL-SENT sig=15 from sddm-helper-sta[342590] to Xorg[342593]
+27282290 ms SIGNAL-DELIVERED sig=15 to Xorg[342593]
+27282290 ms XORG GiveUp (SIGTERM handler) [342593]
+27282290 ms XORG xf86Wakeup (after SIGTERM) [342593]
+27282291 ms XORG CloseDownExtensions (main loop already finished) [342593]
+27282317 ms KERNEL change_console
+27282317 ms SIGNAL-SENT sig=10 from kworker/8:0[130589] to Xorg[342593]
+27282318 ms SIGNAL-DELIVERED sig=10 to Xorg[342593]
+27282318 ms XORG xf86VTRequest [342593]
+27282370 ms XORG CloseWellKnownConnections [342593]
+27282370 ms XORG ddxGiveUp [342593]
+27282373 ms EXIT Xorg[342593]
+27312347 ms KERNEL change_console
+27312347 ms KERNEL complete_change_console
+27372467 ms KERNEL change_console
+27372467 ms KERNEL complete_change_console
+27372569 ms XORG CloseWellKnownConnections [346758]
+27372569 ms XORG CloseWellKnownConnections [346758]
+27374753 ms SIGNAL-DELIVERED sig=17 to Xorg[346758]
+27374840 ms SIGNAL-DELIVERED sig=17 to Xorg[346758]
+27378733 ms KERNEL change_console
+27378733 ms SIGNAL-SENT sig=10 from kworker/6:1[342989] to Xorg[346758]
+27378733 ms SIGNAL-DELIVERED sig=10 to Xorg[346758]
+27378733 ms XORG xf86VTRequest [346758]
+27378733 ms XORG xf86VTLeave [346758]
+27378744 ms KERNEL complete_change_console
+27381904 ms KERNEL change_console
+27381904 ms KERNEL complete_change_console
+31454098 ms SIGNAL-SENT sig=15 from systemd[1] to Xorg[346758]
+31454099 ms SIGNAL-DELIVERED sig=1 to Xorg[346758]
+31454099 ms SIGNAL-DELIVERED sig=15 to Xorg[346758]
+31454099 ms XORG GiveUp (SIGTERM handler) [346758]
+31454099 ms XORG xf86Wakeup (after SIGTERM) [346758]
+31454103 ms SIGNAL-DELIVERED sig=1 to Xorg[346758]
+31454106 ms SIGNAL-DELIVERED sig=14 to Xorg[346758]
+31454110 ms SIGNAL-DELIVERED sig=14 to Xorg[346758]
+31454114 ms SIGNAL-DELIVERED sig=14 to Xorg[346758]
+31454119 ms SIGNAL-DELIVERED sig=14 to Xorg[346758]
+31454123 ms XORG CloseDownExtensions (main loop already finished) [346758]
+31454125 ms SIGNAL-DELIVERED sig=14 to Xorg[346758]
+31454130 ms SIGNAL-DELIVERED sig=14 to Xorg[346758]
+
+
+@term[2296]: 1
+@term[342593]: 1
+@term[346758]: 1

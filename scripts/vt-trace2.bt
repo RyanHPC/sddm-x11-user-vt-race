@@ -1,0 +1,16 @@
+BEGIN { printf("ready\n"); }
+tracepoint:syscalls:sys_enter_ioctl
+/args->cmd == 0x5602 || args->cmd == 0x5605 || args->cmd == 0x5606 || args->cmd == 0x5607 || args->cmd == 0x4b3a/
+{ printf("%8llu ms IOCTL %s[%d] cmd=0x%x\n", nsecs/1000000, comm, pid, args->cmd); }
+tracepoint:signal:signal_generate
+/(args->sig == 10 || args->sig == 12 || args->sig == 15) && (args->comm == "Xorg" || args->comm == "sddm-greeter")/
+{ printf("%8llu ms SIGNAL-SENT sig=%d from %s[%d] to %s[%d]\n", nsecs/1000000, args->sig, comm, pid, args->comm, args->pid); }
+tracepoint:signal:signal_deliver
+/comm == "Xorg"/
+{ printf("%8llu ms SIGNAL-DELIVERED sig=%d to Xorg[%d]\n", nsecs/1000000, args->sig, pid); }
+uprobe:/usr/lib/Xorg:xf86VTRequest      { printf("%8llu ms XORG xf86VTRequest\n", nsecs/1000000); }
+uprobe:/usr/lib/Xorg:xf86VTLeave        { printf("%8llu ms XORG xf86VTLeave\n", nsecs/1000000); }
+uprobe:/usr/lib/Xorg:xf86VTSwitchAway   { printf("%8llu ms XORG xf86VTSwitchAway\n", nsecs/1000000); }
+kprobe:change_console          { printf("%8llu ms KERNEL change_console by %s[%d]\n", nsecs/1000000, comm, pid); }
+kprobe:complete_change_console { printf("%8llu ms KERNEL complete_change_console\n", nsecs/1000000); }
+kprobe:do_exit /pid == tid && (comm == "Xorg" || comm == "sddm-greeter")/ { printf("%8llu ms EXIT %s[%d]\n", nsecs/1000000, comm, pid); }

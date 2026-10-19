@@ -1,0 +1,19 @@
+BEGIN { printf("ready\n"); }
+tracepoint:signal:signal_deliver
+/comm == "Xorg"/
+{ if (args->sig == 15) { @term[pid] = 1; } printf("%8llu ms SIGNAL-DELIVERED sig=%d to Xorg[%d]\n", nsecs/1000000, args->sig, pid); }
+tracepoint:signal:signal_generate
+/(args->sig == 10 || args->sig == 15) && args->comm == "Xorg"/
+{ printf("%8llu ms SIGNAL-SENT sig=%d from %s[%d] to Xorg[%d]\n", nsecs/1000000, args->sig, comm, pid, args->pid); }
+uprobe:/usr/lib/Xorg:GiveUp { printf("%8llu ms XORG GiveUp (SIGTERM handler) [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:WaitForSomething /@term[pid]/ { printf("%8llu ms XORG WaitForSomething (after SIGTERM) [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:xf86Wakeup /@term[pid]/ { printf("%8llu ms XORG xf86Wakeup (after SIGTERM) [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:xf86VTRequest { printf("%8llu ms XORG xf86VTRequest [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:xf86VTLeave { printf("%8llu ms XORG xf86VTLeave [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:CloseWellKnownConnections { printf("%8llu ms XORG CloseWellKnownConnections [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:ddxGiveUp { printf("%8llu ms XORG ddxGiveUp [%d]\n", nsecs/1000000, pid); }
+kprobe:change_console { printf("%8llu ms KERNEL change_console\n", nsecs/1000000); }
+kprobe:complete_change_console { printf("%8llu ms KERNEL complete_change_console\n", nsecs/1000000); }
+kprobe:do_exit /pid == tid && comm == "Xorg"/ { printf("%8llu ms EXIT Xorg[%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:CloseDownExtensions { printf("%8llu ms XORG CloseDownExtensions (main loop already finished) [%d]\n", nsecs/1000000, pid); }
+uprobe:/usr/lib/Xorg:OsCleanup { printf("%8llu ms XORG OsCleanup [%d]\n", nsecs/1000000, pid); }
