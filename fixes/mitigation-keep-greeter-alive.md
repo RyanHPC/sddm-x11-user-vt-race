@@ -24,7 +24,7 @@ With it, the greeter stays alive after the login. The daemon stops it 5 s after 
 ## Why it is not a fix
 
 - The race is still in the code. It is hidden because the greeter's Xorg now outlives the VT switch by about 5 s; any change that makes the switch slower than that timer, or that stops the greeter earlier, would bring it back.
-- It was tested on 0.21.0 plus this single commit, not on `master`.
+- It was tested on 0.21.0 plus this single commit, not on the upstream `develop` branch.
 - It changes how the greeter behaves in other situations (for example, when all screens disappear), which is the point of the upstream commit, but I did not test those.
 
 ## Build and install

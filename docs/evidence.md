@@ -96,7 +96,7 @@ Every switch is served by the still-running Xorg (SIGUSR1 → `VT_RELDISP` → `
 
 ## 5. `x11-user` fallback + the change of sddm/sddm#2210
 
-Package: SDDM 0.21.0-7.2 = the Arch `PKGBUILD` plus a `sed` that replaces `VirtualTerminal::jumpToVt(vtNumber, x11UserSession);` with `VirtualTerminal::jumpToVt(vtNumber, true);` in `src/helper/UserSession.cpp`. That is the whole change of [PR #2210](https://github.com/sddm/sddm/pull/2210) (on `master` it sits behind an `if (vtNumber > 0)` that `v0.21.0` does not have). Same configuration as section 1 (`DisplayServer=wayland`, no `weston`, no `sleep` in PAM). One login, the first one after restarting SDDM, Hyprland. Logs: `vt-trace9-pr2210.log` and `sddm-journal-pr2210.log`. t = 0 is the SIGTERM that `sddm-helper-start-x11user` sends to the greeter's Xorg (pid 834982 in the trace).
+Package: SDDM 0.21.0-7.2 = the Arch `PKGBUILD` plus a `sed` that replaces `VirtualTerminal::jumpToVt(vtNumber, x11UserSession);` with `VirtualTerminal::jumpToVt(vtNumber, true);` in `src/helper/UserSession.cpp`. That is the whole change of [PR #2210](https://github.com/sddm/sddm/pull/2210) (on `develop` it sits behind an `if (vtNumber > 0)` that `v0.21.0` does not have). Same configuration as section 1 (`DisplayServer=wayland`, no `weston`, no `sleep` in PAM). One login, the first one after restarting SDDM, Hyprland. Logs: `vt-trace9-pr2210.log` and `sddm-journal-pr2210.log`. t = 0 is the SIGTERM that `sddm-helper-start-x11user` sends to the greeter's Xorg (pid 834982 in the trace).
 
 | Event | t |
 |---|---|

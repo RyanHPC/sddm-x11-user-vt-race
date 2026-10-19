@@ -90,7 +90,7 @@ Same symptom reported in [sddm/sddm#2129](https://github.com/sddm/sddm/issues/21
 
 ## Not verified
 
-Details in [docs/limitations.md](docs/limitations.md). Mainly: other machines and setups, Wayland greeters beyond the 5 logins tested, the full upstream `master`, and a proper fix in SDDM (not written).
+Details in [docs/limitations.md](docs/limitations.md). Mainly: other machines and setups, Wayland greeters beyond the 5 logins tested, the full upstream `develop` branch, and a proper fix in SDDM (not written).
 
 ## Repository layout
 
