@@ -1,6 +1,6 @@
 # Patch: build SDDM 0.21.0 with the one-line change
 
-[`greeter-keep-alive.patch`](greeter-keep-alive.patch) is upstream commit [`da0b64d`](https://github.com/sddm/sddm/commit/da0b64d8e2378c4bce16cbea6cac2ffc89ad1a4a) (author: Daniel Betz, see the header of the file). It applies cleanly on the `v0.21.0` tag. What it does and why it is only a mitigation: [fixes/mitigation-keep-greeter-alive.md](../fixes/mitigation-keep-greeter-alive.md).
+[`greeter-keep-alive.patch`](greeter-keep-alive.patch) is upstream commit [`da0b64d`](https://github.com/sddm/sddm/commit/da0b64d8e2378c4bce16cbea6cac2ffc89ad1a4a) (author: Daniel Betz, see the header of the file). It applies cleanly on the `v0.21.0` tag. The patch is Daniel Betz's work and stays under SDDM's own license; the MIT license in this repository covers everything else. What it does and why it is only a mitigation: [fixes/mitigation-keep-greeter-alive.md](../fixes/mitigation-keep-greeter-alive.md).
 
 This is how I built and tested it on Arch/Garuda. It replaces the system `sddm` package, so use it only if you are comfortable restoring it (the last step does that). A snapshot (for example with snapper) before installing is a good idea.
 
