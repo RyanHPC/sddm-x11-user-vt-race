@@ -16,7 +16,7 @@ On one machine and one configuration (Acer Nitro V15, RTX 3050 Optimus + Intel, 
 - The patch on the full upstream `master`, and [PR #2204](https://github.com/sddm/sddm/pull/2204) (I did not build or test it).
 - A proper fix in SDDM: I have not written or tested one. The ideas in [root-cause](root-cause.md#direction-for-a-proper-fix-untested) are untested.
 - Why `sleep 1` in PAM helps: my explanation is an inference, not traced.
-- The Xorg source links point to `xorg-server-21.1.13` (and I read 1.10.6); the traces were taken on the installed 21.1.25 binary and agree with them. Check `xf86VTRequest` and `xf86Wakeup` in 21.1.25 before relying on the links.
+- The Xorg source links point to the upstream tag `xorg-server-21.1.25`, the installed version. I read `xf86VTRequest` and `xf86Wakeup` there, and `VTsw_usl.c` and `xf86Events.c` have no differences between 21.1.13 and 21.1.25. The Arch package adds one patch on top of the upstream tag (a `damage` revert), which does not touch these files.
 
 ## Notes
 

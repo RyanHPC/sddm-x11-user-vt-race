@@ -1,6 +1,6 @@
 # Root cause
 
-SDDM 0.21.0, greeter running in the `x11-user` fallback. Source links point to the [`v0.21.0`](https://github.com/sddm/sddm/tree/v0.21.0) tag. Xorg links point to the `xorg-server-21.1.13` tag; the traces were taken on the installed 21.1.25 binary (see [limitations](limitations.md)).
+SDDM 0.21.0, greeter running in the `x11-user` fallback. Source links point to the [`v0.21.0`](https://github.com/sddm/sddm/tree/v0.21.0) tag. Xorg links point to the upstream `xorg-server-21.1.25` tag, the version of the installed package; `VTsw_usl.c` and `xf86Events.c` are identical in `21.1.13` and `21.1.25` (see [limitations](limitations.md)).
 
 ## In one paragraph
 
@@ -24,8 +24,8 @@ The timings in steps 6 and 7 (30 s, then 60 s, 90 s in total) match what I measu
 ## Why Xorg never answers
 
 - The old VT is in `VT_PROCESS` mode with Xorg as owner. On `VT_ACTIVATE` the kernel sends it SIGUSR1 and waits for `VT_RELDISP`.
-- The SIGUSR1 handler, `xf86VTRequest`, only sets `xf86Info.vtRequestsPending = TRUE`: [`VTsw_usl.c#L44-L50`](https://gitlab.freedesktop.org/xorg/xserver/-/blob/xorg-server-21.1.13/hw/xfree86/os-support/shared/VTsw_usl.c#L44-L50).
-- The flag is only acted on by `xf86Wakeup`, the wakeup handler of the server's main loop, which calls `xf86VTSwitch` (and from it `xf86VTLeave` and `VT_RELDISP`): [`xf86Events.c#L217-L224`](https://gitlab.freedesktop.org/xorg/xserver/-/blob/xorg-server-21.1.13/hw/xfree86/common/xf86Events.c#L217-L224), [`#L499`](https://gitlab.freedesktop.org/xorg/xserver/-/blob/xorg-server-21.1.13/hw/xfree86/common/xf86Events.c#L499).
+- The SIGUSR1 handler, `xf86VTRequest`, only sets `xf86Info.vtRequestsPending = TRUE`: [`VTsw_usl.c#L44-L50`](https://gitlab.freedesktop.org/xorg/xserver/-/blob/xorg-server-21.1.25/hw/xfree86/os-support/shared/VTsw_usl.c#L44-L50).
+- The flag is only acted on by `xf86Wakeup`, the wakeup handler of the server's main loop, which calls `xf86VTSwitch` (and from it `xf86VTLeave` and `VT_RELDISP`): [`xf86Events.c#L217-L224`](https://gitlab.freedesktop.org/xorg/xserver/-/blob/xorg-server-21.1.25/hw/xfree86/common/xf86Events.c#L217-L224), [`#L499`](https://gitlab.freedesktop.org/xorg/xserver/-/blob/xorg-server-21.1.25/hw/xfree86/common/xf86Events.c#L499).
 - After SIGTERM the main loop has already left. The traces show `GiveUp`, one `xf86Wakeup` and `CloseDownExtensions` within about 1 ms of the signal; the VT request arrives 24–42 ms later, sets the flag, and nothing reads it. Xorg exits about 80–106 ms after the SIGTERM.
 - Result: no `xf86VTLeave`, no `VT_RELDISP`, no `complete_change_console` in the kernel.
 
