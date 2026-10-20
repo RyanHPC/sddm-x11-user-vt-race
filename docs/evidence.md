@@ -96,7 +96,7 @@ Every switch is served by the still-running Xorg (SIGUSR1 → `VT_RELDISP` → `
 
 ## 5. `x11-user` fallback + the change of sddm/sddm#2210
 
-Package: SDDM 0.21.0-7.2 = the Arch `PKGBUILD` plus a `sed` that replaces `VirtualTerminal::jumpToVt(vtNumber, x11UserSession);` with `VirtualTerminal::jumpToVt(vtNumber, true);` in `src/helper/UserSession.cpp`. That is the whole change of [PR #2210](https://github.com/sddm/sddm/pull/2210) (on `develop` it sits behind an `if (vtNumber > 0)` that `v0.21.0` does not have). Same configuration as section 1 (`DisplayServer=wayland`, no `weston`, no `sleep` in PAM). One login, the first one after restarting SDDM, Hyprland. Logs: `vt-trace9-pr2210.log` and `sddm-journal-pr2210.log`. t = 0 is the SIGTERM that `sddm-helper-start-x11user` sends to the greeter's Xorg (pid 834982 in the trace).
+Package: SDDM 0.21.0-7.2 = the Arch `PKGBUILD` plus a `sed` that replaces `VirtualTerminal::jumpToVt(vtNumber, x11UserSession);` with `VirtualTerminal::jumpToVt(vtNumber, true);` in `src/helper/UserSession.cpp`. That is the whole change of [PR #2210](https://github.com/sddm/sddm/pull/2210) (on `develop` it sits behind an `if (vtNumber > 0)` that `v0.21.0` does not have). Same configuration as section 1 (`DisplayServer=wayland`, no `weston`, no `sleep` in PAM). Traced: one login, the first one after restarting SDDM, Hyprland (`vt-trace9-pr2210.log`, `sddm-journal-pr2210.log`). Ten more logins with the same package were counted from the journal only, without a trace (`sddm-journal-pr2210-all.log`). t = 0 is the SIGTERM that `sddm-helper-start-x11user` sends to the greeter's Xorg (pid 834982 in the trace).
 
 | Event | t |
 |---|---|
@@ -113,17 +113,39 @@ There is no `xf86VTLeave` and no `complete_change_console` after the first `chan
 
 Later in the same trace, the Xorg of the second greeter (pid 839674, still alive) serves a VT switch away from the greeter (there is no login in the journal) in about 2 ms: `xf86VTRequest`, `xf86VTLeave`, `complete_change_console`.
 
-Result: one login tested, one cycle; same sequence and timings as the unmodified package. By reading the code (not tested further), a likely reason is that `fixVtMode` only acts on the current VT when it is in `VT_AUTO`, while the greeter's Xorg leaves it in `VT_PROCESS`, and the kernel still waits for that Xorg to answer.
+Result of the traced login: a cycle, with the same sequence and timings as the unmodified package.
+
+Result over all 11 logins with this package (Oct 19 19:05 to Oct 20 00:52, two boots, Hyprland), counting `Session started` in the journal: 9 × `false` (19:05:36, 00:40:22, 00:42:03, 00:43:39, 00:45:19, 00:46:59, 00:48:38, 00:50:17, 00:51:56) and 2 × `true` (00:39:00, 00:39:40). Not counted: one wrong password (00:41:28). The `true` at 00:39:00 ended 8 s later because I rebooted. The journal alone does not show why 2 logins passed; I did not trace them.
+
+By reading the code (not tested further), a likely reason why the change has no effect is that `fixVtMode` only acts on the current VT when it is in `VT_AUTO`, while the greeter's Xorg leaves it in `VT_PROCESS`, and the kernel still waits for that Xorg to answer.
+
+## 6. Control: original package, same configuration
+
+Package: SDDM 0.21.0-7 (the stock Arch package), reinstalled over the 0.21.0-7.2 build of section 5. Same configuration (`DisplayServer=wayland`, no `weston`, no `sleep` in PAM), Hyprland. Counting starts at 00:54:47 on Oct 20 (the `systemctl restart sddm` after the reinstall). Journal only, no trace: `sddm-journal-control-07.log`.
+
+| `Session started` at | Result |
+|---|---|
+| 00:55:26 | false |
+| 00:56:47 | true |
+| 00:57:53 | false |
+| 00:58:37 | false |
+| 00:59:21 | false |
+| 01:00:05 | false |
+| 01:01:14 | true |
+| 01:01:54 | false |
+
+8 logins: 6 cycles, 2 normal. Notes: the first cycle was cut at 56 s by a reboot (SIGTERM from systemd, 00:56:22; its `Session started false` was already in the journal). The last one had not reached its `exited with 2` when I exported the journal. No wrong passwords in this run. I did not trace this run, so I only know that these logins behaved like the cycle in the journal (`false` after 30 s), not that the mechanism was the same each time.
 
 ## Summary
 
 | Case | Logins | Cycles |
 |---|---|---|
 | `x11-user` fallback, original package, no delay | 4 captures | 4 (first login each time) |
+| `x11-user` fallback, original package, control run, right after (journal only) | 8 | 6 |
 | `DisplayServer=x11` | 9 | 0 |
 | Wayland greeter (weston) | 5 | 0 |
 | `x11-user` fallback + one-line patch | 11 | 0 |
-| `x11-user` fallback + change of sddm/sddm#2210 | 1 (first login) | 1 |
+| `x11-user` fallback + change of sddm/sddm#2210 | 11 | 9 |
 | `x11-user` fallback + `sleep 1` in PAM | several, informal (not counted, no trace saved) | 0 observed |
 
-The comparison between the original package and the patched one was made on different boots and days, with the same configuration. What this does and does not show is in [limitations](limitations.md).
+The control (Oct 20) and the #2210 run (Oct 19–20) used the same configuration and look alike (6 of 8 and 9 of 11): with these sample sizes there is no visible difference between them. The patched run (Oct 18) was on a different day. Against the control, 0 of 11 versus 6 of 8 gives p ≈ 0.001 (one-sided Fisher exact test), so the patch result is unlikely to be luck, but that does not remove the day-to-day difference. What this does and does not show is in [limitations](limitations.md).

@@ -6,7 +6,7 @@ A race in SDDM 0.21.0's `x11-user` greeter fallback: the greeter's X server is s
 
 ## Symptom
 
-After typing the password in SDDM, the login hangs. About 30 s later the journal shows `Session started false`; about 60 s after that, `Auth: sddm-helper exited with 2` (90 s in total), and a new greeter appears. The cycle repeats.
+After typing the password in SDDM, the login hangs. About 30 s later the journal shows `Session started false`; about 60 s after that, `Auth: sddm-helper exited with 2` (90 s in total), and a new greeter appears. The cycle repeats. On my machine it is intermittent: 6 of 8 logins on the unmodified package hit it and 2 logged in normally ([evidence](docs/evidence.md#6-control-original-package-same-configuration)).
 
 ```
 sddm[...]: Auth: sddm-helper exited successfully          <- the greeter's helper
@@ -59,7 +59,7 @@ This is what worked on my setup (9 logins, 0 cycles), not a guaranteed universal
 | Option | What it really is | Where |
 |---|---|---|
 | `DisplayServer=x11` | Avoids the faulty path. Does not fix SDDM. | [fixes/solution-displayserver-x11.md](fixes/solution-displayserver-x11.md) |
-| Greeter stays alive after login (one-line change, upstream commit `da0b64d`) | Mitigation. Reverses the order of events so the cycle disappears, but the race is still in the code, only hidden by a ~5 s timer. | [fixes/mitigation-keep-greeter-alive.md](fixes/mitigation-keep-greeter-alive.md), [patch/](patch/) |
+| Greeter stays alive after login (one-line change, upstream commit `da0b64d`) | Works on my setup (0 cycles in 11 logins, against 6 of 8 without it). It reverses the order of events: by my reading of the code the daemon stops the greeter only after the session start is reported, which is after the VT switch. Written for another bug (#2211) and not tested on current `develop`. | [fixes/mitigation-keep-greeter-alive.md](fixes/mitigation-keep-greeter-alive.md), [patch/](patch/) |
 | `sleep 1` in the PAM session stack | Workaround. Only changes timing. | [fixes/workaround-pam-sleep.md](fixes/workaround-pam-sleep.md) |
 | Proper fix in SDDM | Not written or tested. Idea: wait for the greeter's X server to exit before `VT_ACTIVATE`, or bound `VT_WAITACTIVE` and retry. | [docs/root-cause.md](docs/root-cause.md#direction-for-a-proper-fix-untested) |
 
@@ -68,13 +68,14 @@ This is what worked on my setup (9 logins, 0 cycles), not a guaranteed universal
 | Test (all on SDDM 0.21.0, same machine) | Result |
 |---|---|
 | `x11-user` fallback, no delay, Hyprland (3 captures) + Plasma Wayland (1 capture) | Cycle on the first login in each capture; VT request arrives ~25–40 ms after the Xorg SIGTERM and is never served |
+| `x11-user` fallback, original package, control run, right after (journal only) | Cycle in 6 of 8 logins; the other 2 logged in normally |
 | `DisplayServer=x11` | 0 cycles in 9 logins (from the log); Xorg serves the VT request in 71–110 ms |
 | Wayland greeter (`weston`) | 0 cycles in 5 logins; `systemd-logind` resets the VT mode after the compositor exits, switch completes immediately |
 | `x11-user` fallback + one-line patch (greeter stays alive) | 0 cycles in 11 logins; Xorg serves the VT request in 10–27 ms and receives SIGTERM ~5 s later |
-| `x11-user` fallback + change of [sddm/sddm#2210](https://github.com/sddm/sddm/pull/2210) | Cycle on the first login (1 login tested), same sequence and timings as the unmodified package |
+| `x11-user` fallback + change of [sddm/sddm#2210](https://github.com/sddm/sddm/pull/2210) | Cycle in 9 of 11 logins (the first one traced: same sequence and timings as the unmodified package); the other 2 logged in normally |
 | `x11-user` fallback + `sleep 1` in PAM | No cycle in several informal logins; no trace or log saved |
 
-The patch row is the closest thing to a causal test: it changes only the order of events (the greeter outlives the VT switch) and the cycle disappears. The `x11` row shows the same switch being served by a live Xorg, and the `weston` row shows a different VT owner (`systemd-logind`) completing it.
+The patch row is the closest thing to a causal test: it changes only the order of events (the greeter outlives the VT switch) and the cycle disappears. The cycle is intermittent (about 3 logins in 4 on the unmodified package here), so 0 of 11 is unlikely to be luck: p ≈ 0.001 against the control run (one-sided Fisher exact test; the runs were on different days). The `x11` row shows the same switch being served by a live Xorg, and the `weston` row shows a different VT owner (`systemd-logind`) completing it.
 
 Raw data: [logs/](logs/). Scripts: [scripts/](scripts/).
 
@@ -86,7 +87,7 @@ Raw data: [logs/](logs/). Scripts: [scripts/](scripts/).
 
 ## Related upstream issues
 
-Same symptom reported in [sddm/sddm#2129](https://github.com/sddm/sddm/issues/2129), [#2043](https://github.com/sddm/sddm/issues/2043) and [#1624](https://github.com/sddm/sddm/issues/1624). #2129 seems to mix at least two variants of the same symptom: most of its thread is about the Wayland greeter (`kwin_wayland` leaving the VT in `VT_PROCESS`, see [PR #2204](https://github.com/sddm/sddm/pull/2204)), which is a different trigger from the `x11-user` fallback described here. [#1929](https://github.com/sddm/sddm/issues/1929) may be the same (same versions, 32 s then 60 s, user helper only starting after the timeout), but it does not say which `DisplayServer` was used. Related VT-switch discussions: [#1443](https://github.com/sddm/sddm/issues/1443), [PR #2204](https://github.com/sddm/sddm/pull/2204). I have not checked whether those reports have the same mechanism. If your journal (`journalctl -b -u sddm`) contains `falling back to DisplayServer=x11-user` right before the hang, it may be this one.
+Same symptom reported in [sddm/sddm#2129](https://github.com/sddm/sddm/issues/2129), [#2043](https://github.com/sddm/sddm/issues/2043) and [#1624](https://github.com/sddm/sddm/issues/1624). #2129 seems to mix at least two variants of the same symptom: most of its thread is about the Wayland greeter (`kwin_wayland` leaving the VT in `VT_PROCESS`, see [PR #2204](https://github.com/sddm/sddm/pull/2204)), which is a different trigger from the `x11-user` fallback described here. [#1929](https://github.com/sddm/sddm/issues/1929) may be the same (same versions, 32 s then 60 s, user helper only starting after the timeout), but it does not say which `DisplayServer` was used. Related VT-switch discussions: [#1443](https://github.com/sddm/sddm/issues/1443), [PR #2204](https://github.com/sddm/sddm/pull/2204) and [PR #2210](https://github.com/sddm/sddm/pull/2210). I have not checked whether those reports have the same mechanism. For my case: the one-line change of #2210 (`jumpToVt(vtNumber, true)`) did not stop the cycle (9 of 11 logins, [evidence](docs/evidence.md#5-x11-user-fallback--the-change-of-sddmsddm2210)). For user sessions of type wayland or x11 the expression in #2204 (`x11UserSession || waylandUserSession`) also gives `true`, so I would expect the same result there, but I did not build #2204. (In that code `x11UserSession` means an X11 user session, not `DisplayServer=x11-user`.) If your journal (`journalctl -b -u sddm`) contains `falling back to DisplayServer=x11-user` right before the hang, it may be this one.
 
 ## Not verified
 
