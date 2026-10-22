@@ -10,7 +10,7 @@ Raw data behind [docs/evidence.md](../docs/evidence.md). Hostname and user name 
 | `vt-trace6-plasma.log` | `x11-user` fallback, original package, Plasma (Wayland) (the cycle) |
 | `vt-trace5-x11.log` | `DisplayServer=x11` |
 | `vt-trace7-weston.log` | Wayland greeter (`weston`) |
-| `vt-trace8-patched.log` | `x11-user` fallback + one-line patch |
+| `vt-trace8-patched.log` | `x11-user` fallback + upstream commit `da0b64d` (one line) |
 | `vt-trace9-pr2210.log` | `x11-user` fallback + the change of sddm/sddm#2210 (the cycle) |
 
 ## Journals

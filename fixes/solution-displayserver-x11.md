@@ -51,6 +51,8 @@ sudo cp /etc/sddm.conf.bak /etc/sddm.conf
 sudo systemctl restart sddm
 ```
 
-## Alternative
+## Alternatives
+
+SDDM's `develop` branch already contains a change that removes this race (commit `da0b64d`, not in a release yet): see [upstream-fix-greeter-keep-alive.md](upstream-fix-greeter-keep-alive.md). Once a release includes it, updating makes this setting unnecessary.
 
 If you want a Wayland greeter, install its compositor (by default SDDM runs `weston --shell=kiosk`). In my tests a weston greeter did not hit the cycle (5 logins), because the VT owner is `systemd-logind` there. That sample is small; see [limitations](../docs/limitations.md).

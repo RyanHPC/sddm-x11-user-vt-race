@@ -1,6 +1,6 @@
 # Workaround: `sleep 1` in the PAM session stack
 
-A timing workaround. It made the problem go away in my informal tests (several logins, no trace or log saved) but does not address the cause. Prefer the [`DisplayServer=x11` solution](solution-displayserver-x11.md).
+A timing workaround. It made the problem go away in my informal tests (several logins, no trace or log saved) but does not address the cause. Prefer the [`DisplayServer=x11` solution](solution-displayserver-x11.md), or the [upstream fix](upstream-fix-greeter-keep-alive.md) once a release includes it.
 
 ## The line
 
